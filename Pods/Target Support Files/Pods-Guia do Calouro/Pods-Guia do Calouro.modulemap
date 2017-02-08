@@ -1,0 +1,6 @@
+framework module Pods_Guia_do_Calouro {
+  umbrella header "Pods-Guia do Calouro-umbrella.h"
+
+  export *
+  module * { export * }
+}

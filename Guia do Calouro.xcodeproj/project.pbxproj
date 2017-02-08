@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */; };
+		4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */; };
+		4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */; };
+		4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */; };
+		4CEBDE191E4B226A005E3ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE171E4B226A005E3ADC /* Main.storyboard */; };
+		4CEBDE1C1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE1A1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld */; };
+		4CEBDE1E1E4B226A005E3ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE1D1E4B226A005E3ADC /* Assets.xcassets */; };
+		4CEBDE211E4B226A005E3ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE1F1E4B226A005E3ADC /* LaunchScreen.storyboard */; };
+		96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C9D2DDFF22D7D5DAF5C355 /* Pods_Guia_do_Calouro.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		084F314292C7D77FC2FEBCCC /* Pods-Guia do Calouro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guia do Calouro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro.debug.xcconfig"; sourceTree = "<group>"; };
+		12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guia do Calouro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro.release.xcconfig"; sourceTree = "<group>"; };
+		4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guia do Calouro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4CEBDE181E4B226A005E3ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CEBDE1B1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guia_do_Calouro.xcdatamodel; sourceTree = "<group>"; };
+		4CEBDE1D1E4B226A005E3ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CEBDE201E4B226A005E3ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CEBDE221E4B226A005E3ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C9D2DDFF22D7D5DAF5C355 /* Pods_Guia_do_Calouro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guia_do_Calouro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CEBDE0D1E4B2269005E3ADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27D034618BD8632A2B7101DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5C9D2DDFF22D7D5DAF5C355 /* Pods_Guia_do_Calouro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C08A0A11E4B281A0022A8B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C08A0A21E4B28220022A8B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4C08A0A31E4B28280022A8B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */,
+				4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */,
+				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C08A0A41E4B28360022A8B2 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		4CEBDE071E4B2269005E3ADC = {
+			isa = PBXGroup;
+			children = (
+				4CEBDE121E4B226A005E3ADC /* Guia do Calouro */,
+				4CEBDE111E4B226A005E3ADC /* Products */,
+				897C08C3B2B342CEE16721E1 /* Pods */,
+				27D034618BD8632A2B7101DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4CEBDE111E4B226A005E3ADC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CEBDE121E4B226A005E3ADC /* Guia do Calouro */ = {
+			isa = PBXGroup;
+			children = (
+				4C08A0A41E4B28360022A8B2 /* Providers */,
+				4C08A0A31E4B28280022A8B2 /* Controller */,
+				4C08A0A21E4B28220022A8B2 /* View */,
+				4C08A0A11E4B281A0022A8B2 /* Model */,
+				4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */,
+				4CEBDE171E4B226A005E3ADC /* Main.storyboard */,
+				4CEBDE1D1E4B226A005E3ADC /* Assets.xcassets */,
+				4CEBDE1F1E4B226A005E3ADC /* LaunchScreen.storyboard */,
+				4CEBDE221E4B226A005E3ADC /* Info.plist */,
+				4CEBDE1A1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld */,
+			);
+			path = "Guia do Calouro";
+			sourceTree = "<group>";
+		};
+		897C08C3B2B342CEE16721E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				084F314292C7D77FC2FEBCCC /* Pods-Guia do Calouro.debug.xcconfig */,
+				12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CEBDE0F1E4B2269005E3ADC /* Guia do Calouro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CEBDE251E4B226A005E3ADC /* Build configuration list for PBXNativeTarget "Guia do Calouro" */;
+			buildPhases = (
+				0C51B8B5B115BE210189A4B0 /* [CP] Check Pods Manifest.lock */,
+				4CEBDE0C1E4B2269005E3ADC /* Sources */,
+				4CEBDE0D1E4B2269005E3ADC /* Frameworks */,
+				4CEBDE0E1E4B2269005E3ADC /* Resources */,
+				036FE72F63FB77AD3387C03E /* [CP] Embed Pods Frameworks */,
+				2720CDA4E88AE07393C6E517 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Guia do Calouro";
+			productName = "Guia do Calouro";
+			productReference = 4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CEBDE081E4B2269005E3ADC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Daniel Araújo Silva";
+				TargetAttributes = {
+					4CEBDE0F1E4B2269005E3ADC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZX8B9U4537;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4CEBDE0B1E4B2269005E3ADC /* Build configuration list for PBXProject "Guia do Calouro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CEBDE071E4B2269005E3ADC;
+			productRefGroup = 4CEBDE111E4B226A005E3ADC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CEBDE0F1E4B2269005E3ADC /* Guia do Calouro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CEBDE0E1E4B2269005E3ADC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEBDE211E4B226A005E3ADC /* LaunchScreen.storyboard in Resources */,
+				4CEBDE1E1E4B226A005E3ADC /* Assets.xcassets in Resources */,
+				4CEBDE191E4B226A005E3ADC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		036FE72F63FB77AD3387C03E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C51B8B5B115BE210189A4B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2720CDA4E88AE07393C6E517 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CEBDE0C1E4B2269005E3ADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
+				4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */,
+				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
+				4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */,
+				4CEBDE1C1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CEBDE171E4B226A005E3ADC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CEBDE181E4B226A005E3ADC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CEBDE1F1E4B226A005E3ADC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CEBDE201E4B226A005E3ADC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CEBDE231E4B226A005E3ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CEBDE241E4B226A005E3ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CEBDE261E4B226A005E3ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084F314292C7D77FC2FEBCCC /* Pods-Guia do Calouro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZX8B9U4537;
+				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.danielaraujos.Guia-do-Calouro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4CEBDE271E4B226A005E3ADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZX8B9U4537;
+				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.danielaraujos.Guia-do-Calouro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CEBDE0B1E4B2269005E3ADC /* Build configuration list for PBXProject "Guia do Calouro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEBDE231E4B226A005E3ADC /* Debug */,
+				4CEBDE241E4B226A005E3ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CEBDE251E4B226A005E3ADC /* Build configuration list for PBXNativeTarget "Guia do Calouro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEBDE261E4B226A005E3ADC /* Debug */,
+				4CEBDE271E4B226A005E3ADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CEBDE1A1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CEBDE1B1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodel */,
+			);
+			currentVersion = 4CEBDE1B1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodel */;
+			path = Guia_do_Calouro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CEBDE081E4B2269005E3ADC /* Project object */;
+}
