@@ -36,6 +36,8 @@ class LoadingViewController: UIViewController {
         
         self.urlProviders();
         self.CallUrls();
+        self.mudar()
+        
     }
     
     
@@ -79,6 +81,15 @@ class LoadingViewController: UIViewController {
         self.CallAlomo(url: self.shifts! ,valueCall: "shifts",valueKey: "shifts");
         self.CallAlomo(url: self.schedules!,valueCall: "schedules",valueKey: "schedules");
         self.CallAlomo(url: self.places! ,valueCall: "places",valueKey: "places");
+        
+        
+        
+        
+    }
+    
+    func mudar(){
+        let loginVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        self.present(loginVC, animated: true, completion: nil)
     }
     
 
@@ -92,91 +103,152 @@ class LoadingViewController: UIViewController {
     
     func parseData(JSONData: Data, value:String, chave:String){
         let carregamento = UserDefaults.standard.object(forKey: chave) as? NSDictionary
-        
+        let methodStart = Date()
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
             //print(json)
             
-            switch value {
-            case "buildings":
-                print("buildings")
-                UserDefaults.standard.set(json, forKey: chave)
-                print(carregamento)
+            if json != carregamento {
+                switch value {
+                case "buildings":
+                    print("buildings")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "benefits":
+                    print("benefits")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "abouts":
+                    print("abouts")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "calendars":
+                    print("calendars")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "month_calendars":
+                    print("month_calendars")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "typs":
+                    print("typs")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "category_typs":
+                    print("category_typs")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "telephones":
+                    print("telephones")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "emails":
+                    print("emails")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "managements":
+                    print("managements")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "category_managements":
+                    print("category_managements")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "feedings":
+                    print("feedings")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "transports":
+                    print("transports")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "shifts":
+                    print("shifts")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "schedules":
+                    print("schedules")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                case "places":
+                    print("places")
+                    UserDefaults.standard.set(json, forKey: chave)
+                    
+                default:
+                    print("Padrao")
                 
-                if Connection.Instance.isConnectedWifi() == true{
-                    print("Com internet no Wifi")
-                    if carregamento != json {
-                        UserDefaults.standard.set(json, forKey: chave)
-                    }
                 }
-                
-                
-            case "benefits":
-                print("benefits")
-                
-            case "abouts":
-                print("abouts")
-                
-            case "calendars":
-                print("calendars")
-                
-            case "month_calendars":
-                print("month_calendars")
-                
-            case "typs":
-                print("typs")
-                
-            case "category_typs":
-                print("category_typs")
-                
-            case "telephones":
-                print("telephones")
-                
-            case "emails":
-                print("emails")
-                
-            case "managements":
-                print("managements")
-                
-            case "category_managements":
-                print("category_managements")
-                
-                
-            case "feedings":
-                print("feedings")
-                
-            case "transports":
-                print("transports")
-                
-                
-            case "shifts":
-                print("shifts")
-                
-            case "schedules":
-                print("schedules")
-                
-            case "places":
-                print("places")
-                
-                
-            default:
-                print("Padrao")
+            
             }
-            
-            
-            
-            
-            
-            
-            
-     
-            
-            
+//        else{
+//                switch value {
+//                case "buildings":
+//                    print("buildings")
+//                    
+//                case "benefits":
+//                    print("benefits")
+//                    
+//                case "abouts":
+//                    print("abouts")
+//                    
+//                case "calendars":
+//                    print("calendars")
+//                    
+//                case "month_calendars":
+//                    print("month_calendars")
+//                    
+//                case "typs":
+//                    print("typs")
+//                    
+//                case "category_typs":
+//                    print("category_typs")
+//                    
+//                case "telephones":
+//                    print("telephones")
+//                    
+//                case "emails":
+//                    print("emails")
+//                    
+//                case "managements":
+//                    print("managements")
+//                    
+//                case "category_managements":
+//                    print("category_managements")
+//                    
+//                case "feedings":
+//                    print("feedings")
+//                    
+//                case "transports":
+//                    print("transports")
+//                    
+//                case "shifts":
+//                    print("shifts")
+//                    
+//                case "schedules":
+//                    print("schedules")
+//                    
+//                case "places":
+//                    print("places")
+//                    
+//                default:
+//                    print("Padrao")
+//                }
+//
+//            }
+        
         }catch{
             print(error)
         }
         
+        let methodFinally = Date()
+        let execulteTime = methodFinally.timeIntervalSince(methodStart)
+        print(execulteTime)
+        
+        
     }
+    
+    
+  
 
 
     
