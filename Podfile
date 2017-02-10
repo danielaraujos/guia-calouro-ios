@@ -6,6 +6,7 @@ target 'Guia do Calouro' do
   use_frameworks!
   
    pod 'Alamofire', '~> 4.3'
+   pod 'SVProgressHUD'
 
 
 end

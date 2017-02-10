@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */; };
 		4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */; };
+		4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */; };
+		4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6711E4D19610007D9B5 /* UrlProvider.swift */; };
 		4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5374D1E4B39B000E957B4 /* Connection.swift */; };
 		4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */; };
 		4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */; };
@@ -24,6 +26,8 @@
 		12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guia do Calouro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro.release.xcconfig"; sourceTree = "<group>"; };
 		4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		4C89A6711E4D19610007D9B5 /* UrlProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlProvider.swift; sourceTree = "<group>"; };
 		4CB5374D1E4B39B000E957B4 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guia do Calouro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */,
 				4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */,
 				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
+				4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB5374D1E4B39B000E957B4 /* Connection.swift */,
+				4C89A6711E4D19610007D9B5 /* UrlProvider.swift */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
+				4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */,
 				4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */,
 				4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */,
 				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
