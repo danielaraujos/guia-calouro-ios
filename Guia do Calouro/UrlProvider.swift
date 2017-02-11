@@ -21,4 +21,7 @@ class UrlProvider{
     }
     
     
+    let lerUrlBuilding = "http://localhost/Pessoal/webservicecalouro/webroot/uploads/building/"
+    
+    
 }

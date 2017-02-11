@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bMH-av-qQ7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0P9-9O-yYC">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,182 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K89-fy-hmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532.5" y="873.59154929577471"/>
+            <point key="canvasLocation" x="-1811" y="881"/>
+        </scene>
+        <!--Building View Controller-->
+        <scene sceneID="fLI-OM-IHh">
+            <objects>
+                <viewController restorationIdentifier="Predios" storyboardIdentifier="Predios" id="n29-eA-QcI" customClass="BuildingViewController" customModule="Guia_do_Calouro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ly-my-x2u"/>
+                        <viewControllerLayoutGuide type="bottom" id="OfY-K6-ceh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8eO-be-al5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-74-sU5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellBuilding" rowHeight="85" id="WMN-mS-cgy" customClass="BuildingCelula" customModule="Guia_do_Calouro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMN-mS-cgy" id="Cv0-1Y-qeF">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdT-Mi-AN9">
+                                                    <rect key="frame" x="16" y="8" width="91" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo da Celula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zix-HN-tky">
+                                                    <rect key="frame" x="117" y="8" width="117" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitulo para o conteudo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5X-Ik-IVb">
+                                                    <rect key="frame" x="119" y="26" width="198" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageBuilding" destination="tdT-Mi-AN9" id="pqb-b4-Fp4"/>
+                                            <outlet property="lblSubTitle" destination="I5X-Ik-IVb" id="GxO-CD-gzA"/>
+                                            <outlet property="lblTitle" destination="Zix-HN-tky" id="ps8-oT-Yub"/>
+                                            <segue destination="eWS-wO-ufv" kind="show" identifier="BuildingSegue" id="jKp-mG-YBL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n29-eA-QcI" id="dNw-4g-3w9"/>
+                                    <outlet property="delegate" destination="n29-eA-QcI" id="kuk-4H-m9X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XV1-L4-J9V"/>
+                    <connections>
+                        <outlet property="tableView" destination="fHW-74-sU5" id="gNb-y8-bX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afS-ds-oe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.75" y="885.21126760563379"/>
+        </scene>
+        <!--Calendars View Controller-->
+        <scene sceneID="23q-v3-blv">
+            <objects>
+                <viewController restorationIdentifier="Calendario" storyboardIdentifier="Calendario" id="ARd-SV-BOz" customClass="CalendarsViewController" customModule="Guia_do_Calouro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uGD-OH-Ohc"/>
+                        <viewControllerLayoutGuide type="bottom" id="cC5-22-X0f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRy-WN-ZEs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2WK-Y4-jAl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CalendarCell" id="WQ3-kb-jKx">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQ3-kb-jKx" id="QHY-vj-RHH">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CwK-zV-X82" kind="show" identifier="MonthSegue" id="f4B-5A-470"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ARd-SV-BOz" id="b7b-Yl-hsQ"/>
+                                    <outlet property="delegate" destination="ARd-SV-BOz" id="fYy-fZ-qJT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2WK-Y4-jAl" id="opj-KR-TqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nv6-bG-X7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155.625" y="1580.2816901408451"/>
+        </scene>
+        <!--Month Calendars View Controller-->
+        <scene sceneID="blL-3g-Neb">
+            <objects>
+                <viewController id="CwK-zV-X82" customClass="MonthCalendarsViewController" customModule="Guia_do_Calouro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YrG-UC-MGi"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrn-8v-xTN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AaU-XD-FVr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-dr-gjl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MonthCell" id="kbT-kn-wxn">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kbT-kn-wxn" id="f5l-1g-q1M">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CwK-zV-X82" id="TMH-Vh-IJV"/>
+                                    <outlet property="delegate" destination="CwK-zV-X82" id="JlY-zU-DrY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MyC-L6-JhB"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ob0-dr-gjl" id="Tmk-eq-eoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ne3-rd-720" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.5" y="1579.2253521126761"/>
+        </scene>
+        <!--Building Detail View Controller-->
+        <scene sceneID="OFo-pa-RUc">
+            <objects>
+                <viewController id="eWS-wO-ufv" customClass="BuildingDetailViewController" customModule="Guia_do_Calouro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u5k-wg-eWx"/>
+                        <viewControllerLayoutGuide type="bottom" id="EpD-Jx-YmF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DqR-jK-ufP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dc-gB-rg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="881"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="vHR-EI-j1k">
@@ -77,7 +252,7 @@
                                         <rect key="frame" x="0.0" y="22" width="260" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2O0-po-Cet" id="Szi-SK-ewj">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="912-cx-KUR">

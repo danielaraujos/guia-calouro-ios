@@ -94,6 +94,20 @@ class LoadingViewController: UIViewController {
     
 
     func CallAlomo(url:String, valueCall:String, valueKey: String){
+        
+//        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default)
+//            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+//                print("Progress: \(progress.fractionCompleted)")
+//            }
+//            .validate { request, response, data in
+//                // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
+//                return .success
+//            }
+//            .responseJSON { response in
+//                debugPrint(response)
+//                self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)
+//        }
+        
         Alamofire.request(url).responseJSON(completionHandler: {
             response in
             self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)

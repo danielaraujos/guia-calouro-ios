@@ -9,8 +9,17 @@
 /* Begin PBXBuildFile section */
 		4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */; };
 		4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */; };
+		4C12C2391E4F2A3300BAC0BD /* TesteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */; };
 		4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */; };
 		4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6711E4D19610007D9B5 /* UrlProvider.swift */; };
+		4C89A6741E4E3E3F0007D9B5 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6731E4E3E3F0007D9B5 /* Building.swift */; };
+		4C89A6761E4E40EC0007D9B5 /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */; };
+		4C89A67B1E4E4B190007D9B5 /* BuildingCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A67A1E4E4B190007D9B5 /* BuildingCelula.swift */; };
+		4C89A67E1E4E50CF0007D9B5 /* BuildingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A67D1E4E50CF0007D9B5 /* BuildingDetailViewController.swift */; };
+		4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FDA1E4E955A00C259FC /* CalendarsViewController.swift */; };
+		4CAA7FDD1E4E957400C259FC /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FDC1E4E957400C259FC /* Calendar.swift */; };
+		4CAA7FE01E4E99A600C259FC /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */; };
+		4CAA7FE21E4EA0D100C259FC /* MonthCalendarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */; };
 		4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5374D1E4B39B000E957B4 /* Connection.swift */; };
 		4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */; };
 		4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */; };
@@ -26,8 +35,17 @@
 		12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guia do Calouro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro.release.xcconfig"; sourceTree = "<group>"; };
 		4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesteTableViewController.swift; sourceTree = "<group>"; };
 		4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4C89A6711E4D19610007D9B5 /* UrlProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlProvider.swift; sourceTree = "<group>"; };
+		4C89A6731E4E3E3F0007D9B5 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
+		4C89A67A1E4E4B190007D9B5 /* BuildingCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingCelula.swift; sourceTree = "<group>"; };
+		4C89A67D1E4E50CF0007D9B5 /* BuildingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingDetailViewController.swift; sourceTree = "<group>"; };
+		4CAA7FDA1E4E955A00C259FC /* CalendarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsViewController.swift; sourceTree = "<group>"; };
+		4CAA7FDC1E4E957400C259FC /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
+		4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCalendarsViewController.swift; sourceTree = "<group>"; };
 		4CB5374D1E4B39B000E957B4 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guia do Calouro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +81,9 @@
 		4C08A0A11E4B281A0022A8B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C89A6731E4E3E3F0007D9B5 /* Building.swift */,
+				4CAA7FDC1E4E957400C259FC /* Calendar.swift */,
+				4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -70,6 +91,7 @@
 		4C08A0A21E4B28220022A8B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C89A67A1E4E4B190007D9B5 /* BuildingCelula.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -77,10 +99,11 @@
 		4C08A0A31E4B28280022A8B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */,
-				4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */,
+				4C89A6771E4E40F20007D9B5 /* SideMenu */,
 				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
 				4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */,
+				4C89A67C1E4E509C0007D9B5 /* Building */,
+				4CAA7FDE1E4E977000C259FC /* Calendars */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -92,6 +115,34 @@
 				4C89A6711E4D19610007D9B5 /* UrlProvider.swift */,
 			);
 			name = Providers;
+			sourceTree = "<group>";
+		};
+		4C89A6771E4E40F20007D9B5 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */,
+				4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		4C89A67C1E4E509C0007D9B5 /* Building */ = {
+			isa = PBXGroup;
+			children = (
+				4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */,
+				4C89A67D1E4E50CF0007D9B5 /* BuildingDetailViewController.swift */,
+			);
+			name = Building;
+			sourceTree = "<group>";
+		};
+		4CAA7FDE1E4E977000C259FC /* Calendars */ = {
+			isa = PBXGroup;
+			children = (
+				4CAA7FDA1E4E955A00C259FC /* CalendarsViewController.swift */,
+				4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */,
+				4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */,
+			);
+			name = Calendars;
 			sourceTree = "<group>";
 		};
 		4CEBDE071E4B2269005E3ADC = {
@@ -262,14 +313,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C89A6741E4E3E3F0007D9B5 /* Building.swift in Sources */,
+				4C89A67E1E4E50CF0007D9B5 /* BuildingDetailViewController.swift in Sources */,
+				4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */,
 				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
 				4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */,
 				4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */,
 				4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */,
+				4C89A6761E4E40EC0007D9B5 /* BuildingViewController.swift in Sources */,
+				4C89A67B1E4E4B190007D9B5 /* BuildingCelula.swift in Sources */,
+				4C12C2391E4F2A3300BAC0BD /* TesteTableViewController.swift in Sources */,
+				4CAA7FE01E4E99A600C259FC /* MonthCalendar.swift in Sources */,
+				4CAA7FE21E4EA0D100C259FC /* MonthCalendarsViewController.swift in Sources */,
 				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
 				4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */,
 				4CEBDE1C1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld in Sources */,
+				4CAA7FDD1E4E957400C259FC /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
