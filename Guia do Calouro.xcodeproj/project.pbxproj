@@ -9,7 +9,16 @@
 /* Begin PBXBuildFile section */
 		4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */; };
 		4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */; };
-		4C12C2391E4F2A3300BAC0BD /* TesteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */; };
+		4C12C23D1E4F665200BAC0BD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */; };
+		4C12C2401E4F667B00BAC0BD /* BenefitsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */; };
+		4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2411E4F668800BAC0BD /* Benefit.swift */; };
+		4C7B797C1E50DB4C0027FD21 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */; };
+		4C7B797E1E50DB5A0027FD21 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B797D1E50DB5A0027FD21 /* Transport.swift */; };
+		4C7B79811E50DC670027FD21 /* UsefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79801E50DC670027FD21 /* UsefulViewController.swift */; };
+		4C7B79841E50DD670027FD21 /* FeedingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79831E50DD670027FD21 /* FeedingViewController.swift */; };
+		4C7B79871E50DE070027FD21 /* TypsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79861E50DE070027FD21 /* TypsViewController.swift */; };
+		4C7B798A1E50DE870027FD21 /* ManagementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79891E50DE870027FD21 /* ManagementsViewController.swift */; };
+		4C7B798D1E50DF2D0027FD21 /* AboutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B798C1E50DF2D0027FD21 /* AboutsViewController.swift */; };
 		4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */; };
 		4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6711E4D19610007D9B5 /* UrlProvider.swift */; };
 		4C89A6741E4E3E3F0007D9B5 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6731E4E3E3F0007D9B5 /* Building.swift */; };
@@ -35,7 +44,18 @@
 		12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guia do Calouro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guia do Calouro/Pods-Guia do Calouro.release.xcconfig"; sourceTree = "<group>"; };
 		4C08A09D1E4B28150022A8B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C08A09E1E4B28150022A8B2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesteTableViewController.swift; sourceTree = "<group>"; };
+		4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
+		4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsCelula.swift; sourceTree = "<group>"; };
+		4C12C2411E4F668800BAC0BD /* Benefit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
+		4C7B79771E50D2420027FD21 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
+		4C7B79791E50D2610027FD21 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportsViewController.swift; sourceTree = "<group>"; };
+		4C7B797D1E50DB5A0027FD21 /* Transport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
+		4C7B79801E50DC670027FD21 /* UsefulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulViewController.swift; sourceTree = "<group>"; };
+		4C7B79831E50DD670027FD21 /* FeedingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingViewController.swift; sourceTree = "<group>"; };
+		4C7B79861E50DE070027FD21 /* TypsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypsViewController.swift; sourceTree = "<group>"; };
+		4C7B79891E50DE870027FD21 /* ManagementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementsViewController.swift; sourceTree = "<group>"; };
+		4C7B798C1E50DF2D0027FD21 /* AboutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutsViewController.swift; sourceTree = "<group>"; };
 		4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4C89A6711E4D19610007D9B5 /* UrlProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlProvider.swift; sourceTree = "<group>"; };
 		4C89A6731E4E3E3F0007D9B5 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
@@ -73,6 +93,8 @@
 		27D034618BD8632A2B7101DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C7B79791E50D2610027FD21 /* Alamofire.framework */,
+				4C7B79771E50D2420027FD21 /* AlamofireImage.framework */,
 				B5C9D2DDFF22D7D5DAF5C355 /* Pods_Guia_do_Calouro.framework */,
 			);
 			name = Frameworks;
@@ -84,6 +106,8 @@
 				4C89A6731E4E3E3F0007D9B5 /* Building.swift */,
 				4CAA7FDC1E4E957400C259FC /* Calendar.swift */,
 				4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */,
+				4C12C2411E4F668800BAC0BD /* Benefit.swift */,
+				4C7B797D1E50DB5A0027FD21 /* Transport.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -92,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4C89A67A1E4E4B190007D9B5 /* BuildingCelula.swift */,
+				4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -100,10 +125,16 @@
 			isa = PBXGroup;
 			children = (
 				4C89A6771E4E40F20007D9B5 /* SideMenu */,
-				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
-				4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */,
+				4C7B798F1E50DF860027FD21 /* Home */,
 				4C89A67C1E4E509C0007D9B5 /* Building */,
 				4CAA7FDE1E4E977000C259FC /* Calendars */,
+				4C12C23E1E4F665700BAC0BD /* Benefits */,
+				4C7B797F1E50DB760027FD21 /* Transports */,
+				4C7B79821E50DC6A0027FD21 /* Useful */,
+				4C7B79851E50DD9A0027FD21 /* Feedings */,
+				4C7B79881E50DE0C0027FD21 /* Typs */,
+				4C7B798B1E50DE910027FD21 /* Managements */,
+				4C7B798E1E50DF320027FD21 /* Abouts */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -115,6 +146,71 @@
 				4C89A6711E4D19610007D9B5 /* UrlProvider.swift */,
 			);
 			name = Providers;
+			sourceTree = "<group>";
+		};
+		4C12C23E1E4F665700BAC0BD /* Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */,
+			);
+			name = Benefits;
+			sourceTree = "<group>";
+		};
+		4C7B797F1E50DB760027FD21 /* Transports */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */,
+			);
+			name = Transports;
+			sourceTree = "<group>";
+		};
+		4C7B79821E50DC6A0027FD21 /* Useful */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B79801E50DC670027FD21 /* UsefulViewController.swift */,
+			);
+			name = Useful;
+			sourceTree = "<group>";
+		};
+		4C7B79851E50DD9A0027FD21 /* Feedings */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B79831E50DD670027FD21 /* FeedingViewController.swift */,
+			);
+			name = Feedings;
+			sourceTree = "<group>";
+		};
+		4C7B79881E50DE0C0027FD21 /* Typs */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B79861E50DE070027FD21 /* TypsViewController.swift */,
+			);
+			name = Typs;
+			sourceTree = "<group>";
+		};
+		4C7B798B1E50DE910027FD21 /* Managements */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B79891E50DE870027FD21 /* ManagementsViewController.swift */,
+			);
+			name = Managements;
+			sourceTree = "<group>";
+		};
+		4C7B798E1E50DF320027FD21 /* Abouts */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B798C1E50DF2D0027FD21 /* AboutsViewController.swift */,
+			);
+			name = Abouts;
+			sourceTree = "<group>";
+		};
+		4C7B798F1E50DF860027FD21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
+				4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		4C89A6771E4E40F20007D9B5 /* SideMenu */ = {
@@ -140,7 +236,6 @@
 			children = (
 				4CAA7FDA1E4E955A00C259FC /* CalendarsViewController.swift */,
 				4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */,
-				4C12C2381E4F2A3300BAC0BD /* TesteTableViewController.swift */,
 			);
 			name = Calendars;
 			sourceTree = "<group>";
@@ -314,6 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C89A6741E4E3E3F0007D9B5 /* Building.swift in Sources */,
+				4C7B797E1E50DB5A0027FD21 /* Transport.swift in Sources */,
+				4C7B798D1E50DF2D0027FD21 /* AboutsViewController.swift in Sources */,
+				4C7B79871E50DE070027FD21 /* TypsViewController.swift in Sources */,
 				4C89A67E1E4E50CF0007D9B5 /* BuildingDetailViewController.swift in Sources */,
 				4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */,
 				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
@@ -321,13 +419,19 @@
 				4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */,
 				4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */,
 				4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */,
+				4C7B79841E50DD670027FD21 /* FeedingViewController.swift in Sources */,
 				4C89A6761E4E40EC0007D9B5 /* BuildingViewController.swift in Sources */,
+				4C7B79811E50DC670027FD21 /* UsefulViewController.swift in Sources */,
 				4C89A67B1E4E4B190007D9B5 /* BuildingCelula.swift in Sources */,
-				4C12C2391E4F2A3300BAC0BD /* TesteTableViewController.swift in Sources */,
 				4CAA7FE01E4E99A600C259FC /* MonthCalendar.swift in Sources */,
+				4C7B798A1E50DE870027FD21 /* ManagementsViewController.swift in Sources */,
+				4C12C2401E4F667B00BAC0BD /* BenefitsCelula.swift in Sources */,
+				4C7B797C1E50DB4C0027FD21 /* TransportsViewController.swift in Sources */,
 				4CAA7FE21E4EA0D100C259FC /* MonthCalendarsViewController.swift in Sources */,
+				4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */,
 				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
 				4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */,
+				4C12C23D1E4F665200BAC0BD /* BenefitsViewController.swift in Sources */,
 				4CEBDE1C1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld in Sources */,
 				4CAA7FDD1E4E957400C259FC /* Calendar.swift in Sources */,
 			);
@@ -455,8 +559,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZX8B9U4537;
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.danielaraujos.Guia-do-Calouro";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.danielaraujos.guiaDoCalouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -469,8 +574,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZX8B9U4537;
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.danielaraujos.Guia-do-Calouro";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.danielaraujos.guiaDoCalouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

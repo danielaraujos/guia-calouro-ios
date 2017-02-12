@@ -23,6 +23,10 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
         self.addSlideMenuButton()
         self.title = "Calendário - Meses"
         
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
     
         
         let urlMonth = UrlProvider.Instance.lerUrl(sufix: "month-calendars.json")

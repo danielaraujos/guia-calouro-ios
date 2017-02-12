@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Guia do Calouro.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5B9990C524DE5A66393FCEC7AEA8BB1B</key>
+		<key>3D55EBB8C6ECC74AEEFC6716BC781DA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>513F43C5DCD0BBA2C74B1C853BD7D1F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B52D766A9C25D671EBFE2CF21580CEE5</key>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>

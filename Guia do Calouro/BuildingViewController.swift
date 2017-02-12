@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import SVProgressHUD
 
 class BuildingViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
@@ -23,6 +24,10 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
         self.addSlideMenuButton()
         
         self.title = "Prédios"
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
         
         let url = UrlProvider.Instance.lerUrl(sufix: "buildings.json")
         self.CallAlomo(url: url);
@@ -90,11 +95,21 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
         return self.buildings.count
     }
     
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let b = self.buildings[indexPath.row]
         let celula = tableView.dequeueReusableCell(withIdentifier: "CellBuilding", for: indexPath) as! BuildingCelula
         
-        celula.imageBuilding.image = b.image
+        //b.image
+        
+        
+        Alamofire.request(UrlProvider.Instance.letImage(sufix:"\(b.dir!)\(b.image!)")).responseImage { response in
+            if let image = response.result.value {
+                celula.imageBuilding.image = image
+            }
+        }
+        
         celula.lblTitle.text = b.name;
         celula.lblSubTitle.text = b.sub_name
         return celula;

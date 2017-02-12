@@ -49,21 +49,26 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             break
             
         case 5:
+            print("Utilidades\n", terminator: "")
+            self.openViewControllerBasedOnIdentifier("Utilidades")
+            break
+            
+        case 6:
             print("Alimentacao\n", terminator: "")
             self.openViewControllerBasedOnIdentifier("Alimentacao")
             break
             
-        case 6:
+        case 7:
             print("Dicas\n", terminator: "")
             self.openViewControllerBasedOnIdentifier("Dicas")
             break
             
-        case 5:
+        case 8:
             print("Gestao\n", terminator: "")
             self.openViewControllerBasedOnIdentifier("Gestao")
             break
             
-        case 6:
+        case 9:
             print("Sobre\n", terminator: "")
             self.openViewControllerBasedOnIdentifier("Sobre")
             break

@@ -7,22 +7,38 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class BuildingDetailViewController: UIViewController {
+    @IBOutlet weak var imagemBuilding: UIImageView!
+    
 
     var buildingGet: Building!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.title = buildingGet.sub_name!
+        self.callImage()
     }
     
+    
+    func callImage(){
+        Alamofire.request(UrlProvider.Instance.letImage(sufix:"\(buildingGet.dir!)\(buildingGet.image!)")).responseImage { response in
+            if let imagem = response.result.value {
+                self.imagemBuilding.image = imagem
+            }
+        }
+    }
+    
+//    
+//    var name: String?
+//    var sub_name: String?
+//    var dir: String?
+//    var image: String?
+//    var credits: String?
+//    var body:String?
 
+    
     
 }

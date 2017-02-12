@@ -28,9 +28,6 @@ class LoadingViewController: UIViewController {
     var schedules: String?
     var places: String?
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,6 +85,7 @@ class LoadingViewController: UIViewController {
     }
     
     func mudar(){
+        
         let loginVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
         self.present(loginVC, animated: true, completion: nil)
     }

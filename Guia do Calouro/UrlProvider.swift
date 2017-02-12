@@ -17,11 +17,15 @@ class UrlProvider{
     
     func lerUrl (sufix:String)-> String{
         let url = "http://localhost/Pessoal/webservicecalouro/api/v1/"
+        //let url = "http://danielaraujos.com/webservicecalouros/api/v1/"
         return "\(url)\(sufix)"
     }
     
     
-    let lerUrlBuilding = "http://localhost/Pessoal/webservicecalouro/webroot/uploads/building/"
+    func letImage(sufix:String)-> String{
+        let url = "http://localhost/Pessoal/webservicecalouro/img/"
+        return "\(url)\(sufix)"
+    }
     
     
 }

@@ -11,20 +11,20 @@ import Foundation
 class Calendar{
     var id: Int?
     var name: String?
-    var month_id: Int?
+    var month_calendar_id: Int?
     
     var array = [Calendar]()
     
-    init(id: Int, name:String, month_id: Int ){
+    init(id: Int, name:String, month_calendar_id: Int ){
         self.id = id
         self.name = name
-        self.month_id = month_id
+        self.month_calendar_id = month_calendar_id
     }
     
     init(array: [String: AnyObject]) {
         id = array["id"] as? Int;
         name = array["name"] as? String;
-        month_id = array["month_id"] as? Int
+        month_calendar_id = array["month_calendar_id"] as? Int
     }
     
 }

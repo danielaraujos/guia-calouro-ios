@@ -13,17 +13,19 @@ class Building {
     var id: Int?
     var name: String?
     var sub_name: String?
-    var image: UIImage?
+    var dir: String?
+    var image: String?
     var credits: String?
     var body:String?
     
     let array = [String]()
     
     
-    init(id: Int, name:String, sub_name:String, image:UIImage, credits:String, body:String){
+    init(id: Int, name:String, sub_name:String, dir:String, image:String, credits:String, body:String){
         self.id = id;
         self.name = name;
         self.sub_name = sub_name;
+        self.dir = dir;
         self.image = image
         self.credits = credits;
         self.body = body;
@@ -32,8 +34,9 @@ class Building {
     init(array:[String: AnyObject]) {
         id == array["id"] as? Int
         name = array["name"] as? String
+        dir = array["dir"] as? String
         sub_name = array["sub_name"] as? String
-        image = array["image"] as? UIImage
+        image = array["image"] as? String
         credits = array["credits"] as? String
         body = array["body"] as? String
     }

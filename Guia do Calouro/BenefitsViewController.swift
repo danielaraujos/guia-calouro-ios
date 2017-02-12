@@ -1,8 +1,8 @@
 //
-//  MonthCalendarsViewController.swift
+//  BenefitsViewController.swift
 //  Guia do Calouro
 //
-//  Created by Daniel Araújo on 10/02/17.
+//  Created by Daniel Araújo on 11/02/17.
 //  Copyright © 2017 Daniel Araújo Silva. All rights reserved.
 //
 
@@ -10,22 +10,27 @@ import UIKit
 import Alamofire
 import SVProgressHUD
 
-class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UITableViewDataSource{
-    
+class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
 
-    var chave = "calendars"
-    var calendars = [Calendar]()
-    var tmp = [String]()
-    var conteudo: MonthCalendar!
+    var chave = "benefits"
+    var benefits = [Benefit]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Calendário - \(conteudo.name!)"
-        let url = UrlProvider.Instance.lerUrl(sufix: "calendars.json")
+        self.addSlideMenuButton()
+        self.title = "Benefícios"
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
+        
+        let url = UrlProvider.Instance.lerUrl(sufix: "benefits.json")
         self.CallAlomo(url: url)
+        
+        
     }
-    
     
     func CallAlomo(url:String){
         Alamofire.request(url).responseJSON(completionHandler: {
@@ -43,35 +48,28 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            
+            print(json)
             
             if carregamento != nil{
-                
-                let calendarDictionaries = carregamento["calendars"] as! [[String:AnyObject]]
-                for calendarDictionary in calendarDictionaries{
-                    let newCalendar = Calendar(array: calendarDictionary)
-                    self.calendars.append(newCalendar)
+                let benefitsDictionaries = carregamento["benefits"] as! [[String:AnyObject]]
+                for benefitDictionary in benefitsDictionaries{
+                    let newBenefits = Benefit(array: benefitDictionary)
+                    self.benefits.append(newBenefits)
                 }
-                
-                for calendar in calendars{
-                    if( conteudo.id! == calendar.month_calendar_id){
-                        self.tmp.append(calendar.name!)
-                    }
-                }
-            
-                OperationQueue.main.addOperation {
-                    SVProgressHUD.dismiss()
-                    self.tableView.reloadData()
-                    
-                }
-                
-                //print(self.tmp)
-                
-                
-                
+
                 
             }else{
                 print("Encontrou nulo")
+                let benefitsDictionaries = json["benefits"] as! [[String:AnyObject]]
+                for benefitDictionary in benefitsDictionaries{
+                    let newBenefits = Benefit(array: benefitDictionary)
+                    self.benefits.append(newBenefits)
+                }
+            }
+            
+            OperationQueue.main.addOperation {
+                SVProgressHUD.dismiss()
+                self.tableView.reloadData()
             }
             
         } catch let erro as NSError {
@@ -87,22 +85,26 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
         
     }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tmp.count
+        return self.benefits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "MonthCell", for: indexPath)
-        celula.textLabel?.text = self.tmp[indexPath.row]
-        
-        return celula;
-        
+        let benefit = self.benefits[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "CellBenefits", for: indexPath) as! BenefitsCelula
+        cell.imageBenefits.image =  benefit.image
+        cell.lblTitle.text = benefit.title
+        cell.lblSubTitle.text = benefit.sub_title
+        return cell;
     }
+
     
 
+   
 
 }
