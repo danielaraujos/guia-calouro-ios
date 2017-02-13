@@ -12,6 +12,8 @@
 		4C12C23D1E4F665200BAC0BD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */; };
 		4C12C2401E4F667B00BAC0BD /* BenefitsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */; };
 		4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2411E4F668800BAC0BD /* Benefit.swift */; };
+		4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C223BE91E513D3F00374EF2 /* Useful.swift */; };
+		4C223BEC1E51444500374EF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */; };
 		4C7B797C1E50DB4C0027FD21 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */; };
 		4C7B797E1E50DB5A0027FD21 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B797D1E50DB5A0027FD21 /* Transport.swift */; };
 		4C7B79811E50DC670027FD21 /* UsefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79801E50DC670027FD21 /* UsefulViewController.swift */; };
@@ -47,6 +49,8 @@
 		4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsCelula.swift; sourceTree = "<group>"; };
 		4C12C2411E4F668800BAC0BD /* Benefit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
+		4C223BE91E513D3F00374EF2 /* Useful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Useful.swift; sourceTree = "<group>"; };
+		4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C7B79771E50D2420027FD21 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
 		4C7B79791E50D2610027FD21 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */,
 				4C12C2411E4F668800BAC0BD /* Benefit.swift */,
 				4C7B797D1E50DB5A0027FD21 /* Transport.swift */,
+				4C223BE91E513D3F00374EF2 /* Useful.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				4C08A0A11E4B281A0022A8B2 /* Model */,
 				4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */,
 				4CEBDE171E4B226A005E3ADC /* Main.storyboard */,
+				4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */,
 				4CEBDE1D1E4B226A005E3ADC /* Assets.xcassets */,
 				4CEBDE1F1E4B226A005E3ADC /* LaunchScreen.storyboard */,
 				4CEBDE221E4B226A005E3ADC /* Info.plist */,
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEBDE211E4B226A005E3ADC /* LaunchScreen.storyboard in Resources */,
+				4C223BEC1E51444500374EF2 /* GoogleService-Info.plist in Resources */,
 				4CEBDE1E1E4B226A005E3ADC /* Assets.xcassets in Resources */,
 				4CEBDE191E4B226A005E3ADC /* Main.storyboard in Resources */,
 			);
@@ -416,6 +423,7 @@
 				4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */,
 				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
+				4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */,
 				4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */,
 				4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */,
 				4C08A0A01E4B28150022A8B2 /* MenuViewController.swift in Sources */,
@@ -561,7 +569,7 @@
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.danielaraujos.guiaDoCalouro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielaraujos.guiaDoCalouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -576,7 +584,7 @@
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.danielaraujos.guiaDoCalouro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielaraujos.guiaDoCalouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

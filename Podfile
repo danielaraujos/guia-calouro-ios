@@ -8,6 +8,9 @@ target 'Guia do Calouro' do
    pod 'Alamofire', '~> 4.3'
    pod 'SVProgressHUD'
    pod 'AlamofireImage', '~> 3.1'
+   pod 'Firebase'
+   pod 'Firebase/AdMob'
+   pod 'Firebase/Messaging'
 
 
 end
