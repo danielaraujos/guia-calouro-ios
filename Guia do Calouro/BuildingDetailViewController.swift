@@ -13,12 +13,14 @@ import AlamofireImage
 class BuildingDetailViewController: UIViewController {
     @IBOutlet weak var imagemBuilding: UIImageView!
     
+    @IBOutlet weak var textView: UITextView!
 
     var buildingGet: Building!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = buildingGet.sub_name!
+        self.textView.text = buildingGet.body!
         self.callImage()
     }
     

@@ -32,7 +32,7 @@ class Building {
     }
     
     init(array:[String: AnyObject]) {
-        id == array["id"] as? Int
+        id = array["id"] as? Int
         name = array["name"] as? String
         dir = array["dir"] as? String
         sub_name = array["sub_name"] as? String

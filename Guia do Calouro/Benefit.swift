@@ -14,18 +14,20 @@ class Benefit{
     var title : String?
     var body: String?
     var link: String?
-    var image:UIImage?
+    var image:String?
     var sub_title: String?
+    var dir: String?
     
     var array = [Benefit]()
     
-    init(id:Int, title:String, body:String,link:String, image:UIImage, sub_title: String){
+    init(id:Int, title:String, body:String,link:String, image:String, sub_title: String, dir:String){
         self.id = id;
         self.title = title;
         self.body = body
         self.link = link;
         self.image = image
         self.sub_title = sub_title
+        self.dir = dir
     }
     
     
@@ -34,7 +36,8 @@ class Benefit{
         title = array["title"] as? String
         body = array["body"] as? String
         link = array["link"] as? String
-        image = array["image"] as? UIImage
+        image = array["image"] as? String
+        dir = array["dir"] as? String
         sub_title = array["sub_title"] as? String
         
     }

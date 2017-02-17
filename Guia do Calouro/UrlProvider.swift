@@ -24,6 +24,7 @@ class UrlProvider{
     
     func letImage(sufix:String)-> String{
         let url = "http://localhost/Pessoal/webservicecalouro/img/"
+        //let url =  "http://danielaraujos.com/webservicecalouros/img/";
         return "\(url)\(sufix)"
     }
     

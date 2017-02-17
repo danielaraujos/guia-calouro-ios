@@ -35,8 +35,8 @@ class UsefulViewController: BaseViewController, UITableViewDelegate, UITableView
         user = Useful(id: 2, name: "E-mails Institucionais")
         self.userful.append(user)
         
-        user = Useful(id: 3, name: "Telefones Comerciais")
-        self.userful.append(user)
+//        user = Useful(id: 3, name: "Telefones Comerciais")
+//        self.userful.append(user)
         
     }
 
@@ -53,9 +53,24 @@ class UsefulViewController: BaseViewController, UITableViewDelegate, UITableView
         let b = self.userful[indexPath.row]
         let celula = tableView.dequeueReusableCell(withIdentifier: "UserfulCell", for: indexPath)
         
-        celula.textLabel?.text = b.name
+        celula.textLabel?.text = b.name!
+        
         
         return celula
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let selector = self.userful[indexPath.row]
+                let viewControllerDestino = segue.destination as! PUsefulViewController
+                viewControllerDestino.pGet = selector
+            }
+        }
     }
 
     

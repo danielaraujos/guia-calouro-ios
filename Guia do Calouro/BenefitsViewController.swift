@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import SVProgressHUD
 
 class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
@@ -97,11 +98,31 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let benefit = self.benefits[indexPath.row]
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "CellBenefits", for: indexPath) as! BenefitsCelula
-        cell.imageBenefits.image =  benefit.image
+        
+        Alamofire.request(UrlProvider.Instance.letImage(sufix:"\(benefit.dir!)\(benefit.image!)")).responseImage { response in
+            if let image = response.result.value {
+                cell.imageBenefits.image = image
+            }
+        }
         cell.lblTitle.text = benefit.title
         cell.lblSubTitle.text = benefit.sub_title
         return cell;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BenefitsSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let benefitsSelect = self.benefits[indexPath.row]
+                let viewControllerDestino = segue.destination as! BenefitsDetailsViewController
+                viewControllerDestino.benefitsGet = benefitsSelect
+            }
+        }
+    }
+
 
     
 
