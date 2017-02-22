@@ -43,48 +43,46 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
         
-        let methodStart = Date()
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            
-            
+        
             if carregamento != nil{
-                
                 let calendarDictionaries = carregamento["calendars"] as! [[String:AnyObject]]
                 for calendarDictionary in calendarDictionaries{
                     let newCalendar = Calendar(array: calendarDictionary)
                     self.calendars.append(newCalendar)
                 }
-                
                 for calendar in calendars{
                     if( conteudo.id! == calendar.month_calendar_id){
                         self.tmp.append(calendar.name!)
                     }
                 }
-            
-                OperationQueue.main.addOperation {
-                    SVProgressHUD.dismiss()
-                    self.tableView.reloadData()
-                    
-                }
-                
             }else{
                 print("Encontrou nulo")
+                let calendarDictionaries = json["calendars"] as! [[String:AnyObject]]
+                for calendarDictionary in calendarDictionaries{
+                    let newCalendar = Calendar(array: calendarDictionary)
+                    self.calendars.append(newCalendar)
+                }
+                for calendar in calendars{
+                    if( conteudo.id! == calendar.month_calendar_id){
+                        self.tmp.append(calendar.name!)
+                    }
+                }
+            }
+            
+            OperationQueue.main.addOperation {
+                SVProgressHUD.dismiss()
+                self.tableView.reloadData()
             }
             
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
-        
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
-        
-        
     }
     
     
@@ -116,10 +114,13 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
                 let viewControllerDestino = segue.destination as! CalendarDetailViewController
                 viewControllerDestino.calendar = monthSelect
             }
-
         }
     }
     
-
-
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
 }

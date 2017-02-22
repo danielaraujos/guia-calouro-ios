@@ -46,43 +46,37 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
     
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as? NSDictionary
-        let methodStart = Date()
+        
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-            //print(json)
-            //print(carregamento);
-            
+        
             if carregamento != nil{
+                let buildingDictionaries = carregamento?["buildings"] as! [[String:AnyObject]]
+                for buildingDictionary in buildingDictionaries{
+                    let newBuilding = Building(array: buildingDictionary)
+                    self.buildings.append(newBuilding)
+                }
+            }else{
+                print("Encontrou nulo")
                 let buildingDictionaries = json["buildings"] as! [[String:AnyObject]]
                 for buildingDictionary in buildingDictionaries{
                     let newBuilding = Building(array: buildingDictionary)
                     self.buildings.append(newBuilding)
-                    
                 }
-                
-                
-                OperationQueue.main.addOperation {
-                    SVProgressHUD.dismiss()
-                    self.tableView.reloadData()
-                    
-                }
-
+            }
             
-            }else{
-                print("Encontrou nulo")
+            OperationQueue.main.addOperation {
+                SVProgressHUD.dismiss()
+                self.tableView.reloadData()
             }
             
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
-        
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
         
         
     }
@@ -101,9 +95,7 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
         let b = self.buildings[indexPath.row]
         let celula = tableView.dequeueReusableCell(withIdentifier: "CellBuilding", for: indexPath) as! BuildingCelula
         
-        //b.image
-        
-        
+    
         Alamofire.request(UrlProvider.Instance.letImage(sufix:"\(b.dir!)\(b.image!)")).responseImage { response in
             if let image = response.result.value {
                 celula.imageBuilding.image = image
@@ -129,9 +121,13 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
             }
         }
     }
-
     
-  
-  
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
+
 
 }

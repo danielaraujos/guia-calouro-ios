@@ -33,14 +33,4 @@ class BuildingDetailViewController: UIViewController {
         }
     }
     
-//    
-//    var name: String?
-//    var sub_name: String?
-//    var dir: String?
-//    var image: String?
-//    var credits: String?
-//    var body:String?
-
-    
-    
 }

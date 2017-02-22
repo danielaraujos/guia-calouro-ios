@@ -30,7 +30,6 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
         let url = UrlProvider.Instance.lerUrl(sufix: "benefits.json")
         self.CallAlomo(url: url)
         
-        
     }
     
     func CallAlomo(url:String){
@@ -44,12 +43,11 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
         
-        let methodStart = Date()
+
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            print(json)
             
             if carregamento != nil{
                 let benefitsDictionaries = carregamento["benefits"] as! [[String:AnyObject]]
@@ -76,12 +74,8 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
-        
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
         
         
     }
@@ -122,10 +116,12 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
             }
         }
     }
-
-
     
-
-   
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
 
 }
