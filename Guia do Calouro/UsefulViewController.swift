@@ -52,10 +52,7 @@ class UsefulViewController: BaseViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let b = self.userful[indexPath.row]
         let celula = tableView.dequeueReusableCell(withIdentifier: "UserfulCell", for: indexPath)
-        
         celula.textLabel?.text = b.name!
-        
-        
         return celula
     }
     
@@ -72,6 +69,4 @@ class UsefulViewController: BaseViewController, UITableViewDelegate, UITableView
             }
         }
     }
-
-    
 }

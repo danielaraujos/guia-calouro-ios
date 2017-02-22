@@ -25,54 +25,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Guia do Calouro/PUsefulViewController.swift"
-            timestampString = "508989897.102984"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "parseData(JSONData:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Guia_do_Calouro.PUsefulViewController.parseData (JSONData : Foundation.Data) -&gt; ()"
-                  moduleName = "Guia do Calouro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielaraujo/Documents/Projetos/Aplicac%CC%A7o%CC%83es/GuiaDoCalouro/Guia%20do%20Calouro/PUsefulViewController.swift"
-                  timestampString = "508987156.025914"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "1615">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Guia_do_Calouro.PUsefulViewController.parseData (JSONData : Foundation.Data) -&gt; ()"
-                  moduleName = "Guia do Calouro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielaraujo/Documents/Projetos/Aplicac%CC%A7o%CC%83es/GuiaDoCalouro/Guia%20do%20Calouro/PUsefulViewController.swift"
-                  timestampString = "508987156.027643"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "4847">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Guia do Calouro/ManagementsViewController.swift"
             timestampString = "509420553.759524"
             startingColumnNumber = "9223372036854775807"

@@ -62,8 +62,6 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
         definesPresentationContext = true
         self.tableView.tableHeaderView = searchController.searchBar
 
-        
-        
     }
     
     
@@ -77,36 +75,42 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave!) as? NSDictionary
-        let methodStart = Date()
+        
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-            //print(json)
-            //print(carregamento);
             
             if carregamento != nil{
                 if (self.pGet.id! == 1 ){
-                    
                     let telephonesDictionaries = carregamento?["telephones"] as! [[String:AnyObject]]
                     for telephoneDictionary in telephonesDictionaries{
                         let newTelephones = Telephone(array: telephoneDictionary)
                         self.telephones.append(newTelephones)
-                        
-                        
                     }
-                    print("Executando 1")
-                
                 } else if(pGet.id! == 2){
-                    
                     let emailsDictionaries = carregamento?["emails"] as! [[String:AnyObject]]
                     for emailDictionary in emailsDictionaries{
                         let newEmails = Email(array: emailDictionary)
                         self.emails.append(newEmails)
-                        
                     }
-        
-                    print("Executando 2")
+                }
+                
+                else{
+                    if (self.pGet.id! == 1 ){
+                        let telephonesDictionaries = json["telephones"] as! [[String:AnyObject]]
+                        for telephoneDictionary in telephonesDictionaries{
+                            let newTelephones = Telephone(array: telephoneDictionary)
+                            self.telephones.append(newTelephones)
+                        }
+                    } else if(pGet.id! == 2){
+                        let emailsDictionaries = json["emails"] as! [[String:AnyObject]]
+                        for emailDictionary in emailsDictionaries{
+                            let newEmails = Email(array: emailDictionary)
+                            self.emails.append(newEmails)
+                        }
+                    }
+
                 }
                 
                 
@@ -123,12 +127,9 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
         
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
         
         
     }
@@ -144,19 +145,14 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
             }else{
                 return self.telephones.count
             }
-            
         }else{
             if searchController.isActive && searchController.searchBar.text != ""{
                 return self.filterEmails.count
             }else{
                 return self.emails.count
             }
-            
         }
-        
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -219,18 +215,19 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
                     let viewControllerDestino = segue.destination as! UsefulDetailViewController
                     viewControllerDestino.telephone = select
                 }else{
-                    
                     let select = self.emails[indexPath.row]
                     let viewControllerDestino = segue.destination as! UsefulDetailViewController
                     viewControllerDestino.email = select
-                
                 }
             }
         }
     }
     
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
     
-    
-    
-
 }

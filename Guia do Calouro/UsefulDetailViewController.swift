@@ -27,7 +27,4 @@ class UsefulDetailViewController: UIViewController {
             self.title = self.email.name
         }
     }
-
-  
-
 }
