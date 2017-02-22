@@ -64,6 +64,10 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     
     func CallAlomo(url:String){
         Alamofire.request(url).responseJSON(completionHandler: {
@@ -180,18 +184,17 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func filterContentForSearch(searchString:String){
+       
         if (self.pGet.id! == 1){
             self.filterTelephones = self.filterTelephones.filter(){
                 nil != $0.name?.range(of: searchString)
             }
-            self.tableView.reloadData()
         }
         else{
-            
             self.filterEmails = self.filterEmails.filter(){
                 nil != $0.name?.range(of: searchString)
             }
-            self.tableView.reloadData()
+            
         }
         self.tableView.reloadData()
         
