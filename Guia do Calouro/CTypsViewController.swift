@@ -2,7 +2,7 @@
 //  TypsViewController.swift
 //  Guia do Calouro
 //
-//  Created by Daniel Araújo on 20/02/17.
+//  Created by Daniel Araújo on 12/02/17.
 //  Copyright © 2017 Daniel Araújo Silva. All rights reserved.
 //
 
@@ -10,30 +10,26 @@ import UIKit
 import Alamofire
 import SVProgressHUD
 
-class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var tableView: UITableView!
+class CTypsViewController: BaseViewController , UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     
-    var typs = [Type]()
-    var chave = "typs"
-    var conteudo: CType!
-    var tmp = [Type]()
     
+    var category = [CType]()
+    var chave = "category_typs"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = self.conteudo.name!
+        
+        self.addSlideMenuButton()
+        self.title = "Categorias"
         
         
         let backItem = UIBarButtonItem()
         backItem.title = " "
         navigationItem.backBarButtonItem = backItem
-        
-        
-        let url = UrlProvider.Instance.lerUrl(sufix: "typs.json")
+        let url = UrlProvider.Instance.lerUrl(sufix: "category-typs.json")
         self.callAlo(url: url)
-
     }
 
     func callAlo(url:String){
@@ -42,7 +38,7 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             self.parseData(JSONData: response.data!)
         })
-        
+    
     }
     
     func parseData(JSONData: Data){
@@ -56,33 +52,18 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //print(json)
             
             if carregamento != nil{
-                let typsDictionaries = carregamento["typs"] as! [[String:AnyObject]]
-                for typeDictionary in typsDictionaries{
-                    let new = Type(array: typeDictionary)
-                    self.typs.append(new)
-                }
-                
-                for type in typs{
-                    if( conteudo.id! == type.category_typ_id!){
-                        let new = Type(id: type.id!, name: type.name!, body: type.body!, name_link: type.name_link!, link: type.link!, category_typ_id: type.category_typ_id!)
-                        self.tmp.append(new)
-
-                    }
+                let categoriesDictionaries = carregamento["cTypes"] as! [[String:AnyObject]]
+                for categoryDictionary in categoriesDictionaries{
+                    let new = CType(array: categoryDictionary)
+                    self.category.append(new)
                 }
                 
                 
             }else{
-                let typsDictionaries = json["typs"] as! [[String:AnyObject]]
-                for typeDictionary in typsDictionaries{
-                    let new = Type(array: typeDictionary)
-                    self.typs.append(new)
-                }
-                for type in typs{
-                    if( conteudo.id! == type.category_typ_id!){
-                        let new = Type(id: type.id!, name: type.name!, body: type.body!, name_link: type.name_link!, link: type.link!, category_typ_id: type.category_typ_id!)
-                        self.tmp.append(new)
-                        
-                    }
+                let categoriessDictionaries = json["cTypes"] as! [[String:AnyObject]]
+                for categoryDictionary in categoriessDictionaries{
+                    let new = CType(array: categoryDictionary)
+                    self.category.append(new)
                 }
             }
             
@@ -103,21 +84,20 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
     }
-    
+
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.typs.count
-        return self.tmp.count
+        return self.category.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CTypesCell", for: indexPath)
         
-        //cell.textLabel?.text = self.typs[indexPath.row].name
-        cell.textLabel?.text = self.tmp[indexPath.row].name
+        cell.textLabel?.text = self.category[indexPath.row].name
         return cell
     }
     
@@ -127,16 +107,18 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SegueTypsDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let select = self.tmp[indexPath.row]
-                let viewControllerDestino =  segue.destination as! TypsDetailViewController
-                viewControllerDestino.typs = select
+        if segue.identifier == "TypesSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let select = self.category[indexPath.row]
+                let viewControllerDestino = segue.destination as! TypsViewController
+                viewControllerDestino.conteudo = select
             }
-            
         }
     }
     
 
+    
+    
+    
 
 }

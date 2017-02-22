@@ -11,8 +11,8 @@ import Alamofire
 import SVProgressHUD
 
 class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UITableViewDataSource{
-    
     @IBOutlet weak var tableView: UITableView!
+  
 
     var chave = "calendars"
     var calendars = [Calendar]()
@@ -22,6 +22,11 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Calendário - \(conteudo.name!)"
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
+        
         let url = UrlProvider.Instance.lerUrl(sufix: "calendars.json")
         self.CallAlomo(url: url)
     }
@@ -65,11 +70,6 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
                     
                 }
                 
-                //print(self.tmp)
-                
-                
-                
-                
             }else{
                 print("Encontrou nulo")
             }
@@ -87,6 +87,7 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
         
     }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
@@ -95,12 +96,28 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
         return self.tmp.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "MonthCell", for: indexPath)
         celula.textLabel?.text = self.tmp[indexPath.row]
-        
         return celula;
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailCalendar"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let monthSelect = self.tmp[indexPath.row]
+                let viewControllerDestino = segue.destination as! CalendarDetailViewController
+                viewControllerDestino.calendar = monthSelect
+            }
+
+        }
     }
     
 
