@@ -22,7 +22,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
-        print("View Controller is : \(topViewController) \n", terminator: "")
+        //print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
             print("Home\n", terminator: "")
