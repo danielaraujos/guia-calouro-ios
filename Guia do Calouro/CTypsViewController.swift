@@ -14,7 +14,6 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
-    
     var category = [CType]()
     var chave = "category_typs"
     
@@ -23,7 +22,6 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
         
         self.addSlideMenuButton()
         self.title = "Categorias"
-        
         
         let backItem = UIBarButtonItem()
         backItem.title = " "
@@ -35,7 +33,6 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
     func callAlo(url:String){
         Alamofire.request(url).responseJSON(completionHandler: {
             response in
-            
             self.parseData(JSONData: response.data!)
         })
     
@@ -44,7 +41,6 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
         
-        let methodStart = Date()
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
@@ -57,7 +53,6 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
                     let new = CType(array: categoryDictionary)
                     self.category.append(new)
                 }
-                
                 
             }else{
                 let categoriessDictionaries = json["cTypes"] as! [[String:AnyObject]]
@@ -75,13 +70,8 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
-        
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
-        
         
     }
 
@@ -116,9 +106,11 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
         }
     }
     
-
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
     
-    
-    
-
 }

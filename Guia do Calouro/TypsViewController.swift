@@ -19,12 +19,10 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var conteudo: CType!
     var tmp = [Type]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = self.conteudo.name!
-        
         
         let backItem = UIBarButtonItem()
         backItem.title = " "
@@ -48,12 +46,10 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
         
-        let methodStart = Date()
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            //print(json)
             
             if carregamento != nil{
                 let typsDictionaries = carregamento["typs"] as! [[String:AnyObject]]
@@ -94,14 +90,8 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
         }
-        
-        let methodFinally = Date()
-        let execulteTime = methodFinally.timeIntervalSince(methodStart)
-        print(execulteTime)
-        
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,14 +99,12 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.typs.count
         return self.tmp.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath)
         
-        //cell.textLabel?.text = self.typs[indexPath.row].name
         cell.textLabel?.text = self.tmp[indexPath.row].name
         return cell
     }
@@ -135,6 +123,13 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             
         }
+    }
+    
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
     }
     
 
