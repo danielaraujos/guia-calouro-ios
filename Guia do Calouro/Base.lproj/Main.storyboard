@@ -895,12 +895,41 @@
                     <view key="view" contentMode="scaleToFill" id="hvw-db-Trg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IKR-CD-QlM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ManagementDetailCell" id="UE2-tM-2Uo">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UE2-tM-2Uo" id="BNN-xx-jT9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PyZ-fO-hoc" id="Ysw-rL-bau"/>
+                                    <outlet property="delegate" destination="PyZ-fO-hoc" id="kN1-8z-BlB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IKR-CD-QlM" firstAttribute="top" secondItem="hvw-db-Trg" secondAttribute="top" id="FKD-h1-BlV"/>
+                            <constraint firstItem="IKR-CD-QlM" firstAttribute="leading" secondItem="hvw-db-Trg" secondAttribute="leading" id="FZy-sL-lFy"/>
+                            <constraint firstItem="oa8-ks-5pa" firstAttribute="top" secondItem="IKR-CD-QlM" secondAttribute="bottom" id="wSA-xE-Hac"/>
+                            <constraint firstAttribute="trailing" secondItem="IKR-CD-QlM" secondAttribute="trailing" id="xVn-Xx-itE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IKR-CD-QlM" id="9n1-Yf-Vr0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9V1-EV-7et" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="6001"/>
+            <point key="canvasLocation" x="1616.25" y="6000"/>
         </scene>
         <!--Abouts View Controller-->
         <scene sceneID="thw-j6-vXE">
