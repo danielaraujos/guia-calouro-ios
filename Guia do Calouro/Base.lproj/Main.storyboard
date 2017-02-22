@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -183,9 +184,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fw3-yL-kO4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fw3-yL-kO4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MonthCell" id="pNf-bX-tqU">
@@ -207,6 +207,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wrn-8v-xTN" firstAttribute="top" secondItem="Fw3-yL-kO4" secondAttribute="bottom" id="Gk9-ZX-F7l"/>
+                            <constraint firstItem="Fw3-yL-kO4" firstAttribute="leading" secondItem="AaU-XD-FVr" secondAttribute="leading" id="lD1-aY-caB"/>
+                            <constraint firstAttribute="trailing" secondItem="Fw3-yL-kO4" secondAttribute="trailing" id="rhQ-la-55k"/>
+                            <constraint firstItem="Fw3-yL-kO4" firstAttribute="top" secondItem="AaU-XD-FVr" secondAttribute="top" id="tya-MW-eg4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MyC-L6-JhB"/>
                     <connections>
@@ -229,15 +235,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do " textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-UJ-csR">
-                                <rect key="frame" x="16" y="20" width="288" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do " textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-UJ-csR">
+                                <rect key="frame" x="16" y="7" width="288" height="303"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f5N-UJ-csR" firstAttribute="trailing" secondItem="jtr-No-sA0" secondAttribute="trailingMargin" id="MnC-77-NDa"/>
+                            <constraint firstItem="f5N-UJ-csR" firstAttribute="leading" secondItem="jtr-No-sA0" secondAttribute="leadingMargin" id="YOY-ab-qBK"/>
+                            <constraint firstItem="BOU-Sk-e9H" firstAttribute="top" secondItem="f5N-UJ-csR" secondAttribute="bottom" constant="258" id="biZ-9q-kOE"/>
+                            <constraint firstItem="f5N-UJ-csR" firstAttribute="top" secondItem="jtr-No-sA0" secondAttribute="topMargin" constant="7" id="mzp-nP-09h"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLx-ir-W9A"/>
                     <connections>
