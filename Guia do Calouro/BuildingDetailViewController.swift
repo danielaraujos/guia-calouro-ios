@@ -12,16 +12,27 @@ import AlamofireImage
 
 class BuildingDetailViewController: UIViewController {
     @IBOutlet weak var imagemBuilding: UIImageView!
+    @IBOutlet weak var lblCreditos: UILabel!
+    @IBOutlet weak var lblSubtitle: UILabel!
+   
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var webViewText: UIWebView!
 
     var buildingGet: Building!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = buildingGet.sub_name!
-        self.textView.text = buildingGet.body!
+        lblCreditos.text = "Créditos: \(buildingGet.credits!)"
+        webViewText.loadHTMLString(buildingGet.body!, baseURL: nil)
         self.callImage()
+        
+        let fab = KCFloatingActionButton()
+        fab.addItem("Localização", icon: UIImage(named: "icMap")!)
+        
+        fab.buttonColor = UIColor.red
+        fab.plusColor = UIColor.white
+        self.view.addSubview(fab)
     }
     
     
