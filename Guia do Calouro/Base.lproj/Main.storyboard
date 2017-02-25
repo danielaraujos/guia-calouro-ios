@@ -601,7 +601,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-Kb-r2h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="318"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-Hh-OK5">
                                 <rect key="frame" x="0.0" y="309" width="320" height="259"/>
@@ -624,14 +624,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="top" secondItem="MNN-Tz-AJ5" secondAttribute="top" id="3XD-Ee-Eg2"/>
-                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="ZEy-Kb-r2h" secondAttribute="bottom" constant="258" id="5Kx-a0-C6B"/>
-                            <constraint firstAttribute="trailing" secondItem="sU4-Hh-OK5" secondAttribute="trailing" id="Lyd-Vn-UhC"/>
-                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="OEl-1m-DRD"/>
-                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="top" secondItem="MMt-wm-Mxm" secondAttribute="bottom" constant="289" id="OW9-im-ZpX"/>
-                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="ZhM-2R-A3n"/>
-                            <constraint firstAttribute="trailing" secondItem="ZEy-Kb-r2h" secondAttribute="trailing" id="xMN-3p-5RO"/>
-                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="sU4-Hh-OK5" secondAttribute="bottom" id="y7c-Zp-H9R"/>
+                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="0U8-H4-xeb"/>
+                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="ZEy-Kb-r2h" secondAttribute="bottom" constant="250" id="4cB-iG-7Rj"/>
+                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="6J2-AU-ns2"/>
+                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="top" secondItem="MMt-wm-Mxm" secondAttribute="bottom" constant="289" id="F5o-lX-VqK"/>
+                            <constraint firstAttribute="trailing" secondItem="ZEy-Kb-r2h" secondAttribute="trailing" id="Gix-SX-zda"/>
+                            <constraint firstAttribute="trailing" secondItem="sU4-Hh-OK5" secondAttribute="trailing" id="WO7-C0-leK"/>
+                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="sU4-Hh-OK5" secondAttribute="bottom" id="lZe-XF-M27"/>
+                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="top" secondItem="MNN-Tz-AJ5" secondAttribute="top" id="rlF-7G-g2X"/>
                         </constraints>
                     </view>
                     <connections>

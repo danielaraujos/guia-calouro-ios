@@ -13,9 +13,11 @@ import SVProgressHUD
 
 class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource
 {
+    
     @IBOutlet weak var mapa: MKMapView!
     @IBOutlet weak var tableView: UITableView!
-
+    var chave = "schedules"
+    var schedules = [Schedule]()
     
     
     override func viewDidLoad() {
@@ -29,6 +31,7 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         navigationItem.backBarButtonItem = backItem
         
         self.localizacaoMaps()
+    
     }
 
     func localizacaoMaps(){
@@ -143,7 +146,10 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
 
         return cell
     }
-
+    
+    
+    
+  
     
     
     
