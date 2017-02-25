@@ -22,13 +22,26 @@ class BuildingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
+        
+        
         self.title = buildingGet.sub_name!
         lblCreditos.text = "Créditos: \(buildingGet.credits!)"
         webViewText.loadHTMLString(buildingGet.body!, baseURL: nil)
         self.callImage()
         
         let fab = KCFloatingActionButton()
-        fab.addItem("Localização", icon: UIImage(named: "icMap")!)
+        //fab.addItem("Localização", icon: UIImage(named: "icMap")!)
+        
+        fab.addItem("Localização", icon: UIImage(named: "icMap")!, handler: { item in
+            
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuildingMapsViewController") as! BuildingMapsViewController
+            self.navigationController?.pushViewController(viewController, animated: true)
+            fab.close()
+        })
         
         fab.buttonColor = UIColor.red
         fab.plusColor = UIColor.white
@@ -43,5 +56,7 @@ class BuildingDetailViewController: UIViewController {
             }
         }
     }
+    
+   
     
 }

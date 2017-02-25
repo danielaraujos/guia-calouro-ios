@@ -30,6 +30,22 @@ class BenefitsDetailsViewController: UIViewController {
             }
         }
         
+        if (self.benefitsGet.link != "" ){
+            let fab = KCFloatingActionButton()
+            fab.addItem("Saiba Mais", icon: UIImage(named: "icShare")!, handler: { item in
+                self.openUrl(url: self.benefitsGet.link!)
+                fab.close()
+            })
+            fab.buttonColor = UIColor.red
+            fab.plusColor = UIColor.white
+            self.view.addSubview(fab)
+        }
+
+    }
+    
+    func openUrl(url: String){
+        let websiteAddress = NSURL(string: url)
+        UIApplication.shared.openURL(websiteAddress! as URL)
     }
 
     

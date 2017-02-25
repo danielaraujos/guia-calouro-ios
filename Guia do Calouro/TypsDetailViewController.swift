@@ -38,7 +38,6 @@ class TypsDetailViewController: UIViewController {
     func openUrl(url: String){
         let websiteAddress = NSURL(string: url)
         UIApplication.shared.openURL(websiteAddress! as URL)
-        print("Clicando")
     }
 
 

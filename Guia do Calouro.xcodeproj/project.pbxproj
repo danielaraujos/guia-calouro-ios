@@ -51,6 +51,8 @@
 		4CC4D6D71E60D8E500BD8C86 /* KCFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6D01E60D8E500BD8C86 /* KCFloatingActionButton.swift */; };
 		4CC4D6D81E60D8E500BD8C86 /* KCFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6D11E60D8E500BD8C86 /* KCFloatingActionButtonDelegate.swift */; };
 		4CC4D6D91E60D8E500BD8C86 /* KCFloatingActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6D21E60D8E500BD8C86 /* KCFloatingActionButtonItem.swift */; };
+		4CC4D6DB1E60E92100BD8C86 /* BuildingMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6DA1E60E92100BD8C86 /* BuildingMapsViewController.swift */; };
+		4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */; };
 		4CC85F101E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC85F0F1E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift */; };
 		4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */; };
 		4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */; };
@@ -110,6 +112,8 @@
 		4CC4D6D01E60D8E500BD8C86 /* KCFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KCFloatingActionButton.swift; path = ../../Sources/KCFloatingActionButton.swift; sourceTree = "<group>"; };
 		4CC4D6D11E60D8E500BD8C86 /* KCFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KCFloatingActionButtonDelegate.swift; path = ../../Sources/KCFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
 		4CC4D6D21E60D8E500BD8C86 /* KCFloatingActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KCFloatingActionButtonItem.swift; path = ../../Sources/KCFloatingActionButtonItem.swift; sourceTree = "<group>"; };
+		4CC4D6DA1E60E92100BD8C86 /* BuildingMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingMapsViewController.swift; sourceTree = "<group>"; };
+		4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4CC85F0F1E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsDetailsViewController.swift; sourceTree = "<group>"; };
 		4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guia do Calouro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */,
 				96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +142,7 @@
 		27D034618BD8632A2B7101DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */,
 				4C7B79791E50D2610027FD21 /* Alamofire.framework */,
 				4C7B79771E50D2420027FD21 /* AlamofireImage.framework */,
 				B5C9D2DDFF22D7D5DAF5C355 /* Pods_Guia_do_Calouro.framework */,
@@ -285,6 +291,7 @@
 			children = (
 				4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */,
 				4C89A67D1E4E50CF0007D9B5 /* BuildingDetailViewController.swift */,
+				4CC4D6DA1E60E92100BD8C86 /* BuildingMapsViewController.swift */,
 			);
 			name = Building;
 			sourceTree = "<group>";
@@ -518,6 +525,7 @@
 				4CA9C6601E5BCB4100B92742 /* TypsDetailViewController.swift in Sources */,
 				4CC4D6D71E60D8E500BD8C86 /* KCFloatingActionButton.swift in Sources */,
 				4CAA7FE21E4EA0D100C259FC /* MonthCalendarsViewController.swift in Sources */,
+				4CC4D6DB1E60E92100BD8C86 /* BuildingMapsViewController.swift in Sources */,
 				4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */,
 				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
 				4CA9C6661E5BD7BA00B92742 /* Management.swift in Sources */,

@@ -17,11 +17,13 @@ class Building {
     var image: String?
     var credits: String?
     var body:String?
+    var latitude :String?
+    var longitude: String?
     
     let array = [String]()
     
     
-    init(id: Int, name:String, sub_name:String, dir:String, image:String, credits:String, body:String){
+    init(id: Int, name:String, sub_name:String, dir:String, image:String, credits:String, body:String,latitude: String, longitude: String){
         self.id = id;
         self.name = name;
         self.sub_name = sub_name;
@@ -29,6 +31,8 @@ class Building {
         self.image = image
         self.credits = credits;
         self.body = body;
+        self.latitude = latitude
+        self.longitude = longitude
     }
     
     init(array:[String: AnyObject]) {
@@ -39,6 +43,8 @@ class Building {
         image = array["image"] as? String
         credits = array["credits"] as? String
         body = array["body"] as? String
+        latitude = array["latitude"] as? String
+        longitude = array["longitude"] as? String
     }
 
 }
