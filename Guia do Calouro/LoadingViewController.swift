@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 class LoadingViewController: UIViewController {
 
@@ -31,12 +32,18 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.urlProviders();
         self.CallUrls();
-        self.mudar()
-        
+        self.redirecionar()
     }
     
+    func redirecionar(){
+        print("Redirecionando")
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navigation") as! UINavigationController
+        self.present(viewController, animated: true, completion: nil)
+
+    }
     
     func urlProviders(){
         //Urls:
@@ -62,6 +69,7 @@ class LoadingViewController: UIViewController {
     
     
     func CallUrls(){
+        
         self.CallAlomo(url: self.buildings!,valueCall: "buildings", valueKey: "buildings" );
         self.CallAlomo(url: self.benefits! ,valueCall: "benefits",valueKey:  "benefits");
         self.CallAlomo(url: self.abouts!,valueCall: "abouts",valueKey:  "abouts");
@@ -81,39 +89,36 @@ class LoadingViewController: UIViewController {
         
         
         
-        
     }
     
-    func mudar(){
-        
-        let loginVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
-        self.present(loginVC, animated: true, completion: nil)
-    }
     
-
     func CallAlomo(url:String, valueCall:String, valueKey: String){
         
-//        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default)
-//            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-//                print("Progress: \(progress.fractionCompleted)")
-//            }
-//            .validate { request, response, data in
-//                // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
-//                return .success
-//            }
-//            .responseJSON { response in
-//                debugPrint(response)
-//                self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)
-//        }
+        SVProgressHUD.show(withStatus: "Carregando - \(valueKey)")
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+                SVProgressHUD.dismiss()
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                //debugPrint(response)
+                self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)
+        }
+
         
-        Alamofire.request(url).responseJSON(completionHandler: {
-            response in
-            self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)
-            
-        });
+//        Alamofire.request(url).responseJSON(completionHandler: {
+//            response in
+//            self.parseData(JSONData: response.data!,value:valueCall, chave: valueKey)
+//            
+//        });
+        
     }
     
     func parseData(JSONData: Data, value:String, chave:String){
+        //SVProgressHUD.show(withStatus: "Carregando")
         let carregamento = UserDefaults.standard.object(forKey: chave) as? NSDictionary
         let methodStart = Date()
         do{
@@ -121,6 +126,7 @@ class LoadingViewController: UIViewController {
             //print(json)
             
             if json != carregamento {
+                print("Pegando do servidor")
                 switch value {
                 case "buildings":
                     print("buildings")
@@ -188,66 +194,67 @@ class LoadingViewController: UIViewController {
                     
                 default:
                     print("Padrao")
-                
+                    
                 }
-            
+                
+            } else{
+                print("Carregando da memoria")
+                switch value {
+                case "buildings":
+                    print("buildings")
+                    
+                case "benefits":
+                    print("benefits")
+                    
+                case "abouts":
+                    print("abouts")
+                    
+                case "calendars":
+                    print("calendars")
+                    
+                case "month_calendars":
+                    print("month_calendars")
+                    
+                case "typs":
+                    print("typs")
+                    
+                case "category_typs":
+                    print("category_typs")
+                    
+                case "telephones":
+                    print("telephones")
+                    
+                case "emails":
+                    print("emails")
+                    
+                case "managements":
+                    print("managements")
+                    
+                case "category_managements":
+                    print("category_managements")
+                    
+                case "feedings":
+                    print("feedings")
+                    
+                case "transports":
+                    print("transports")
+                    
+                case "shifts":
+                    print("shifts")
+                    
+                case "schedules":
+                    print("schedules")
+                    
+                case "places":
+                    print("places")
+                    
+                default:
+                    print("Padrao")
+                }
+                
+                
             }
-//        else{
-//                switch value {
-//                case "buildings":
-//                    print("buildings")
-//                    
-//                case "benefits":
-//                    print("benefits")
-//                    
-//                case "abouts":
-//                    print("abouts")
-//                    
-//                case "calendars":
-//                    print("calendars")
-//                    
-//                case "month_calendars":
-//                    print("month_calendars")
-//                    
-//                case "typs":
-//                    print("typs")
-//                    
-//                case "category_typs":
-//                    print("category_typs")
-//                    
-//                case "telephones":
-//                    print("telephones")
-//                    
-//                case "emails":
-//                    print("emails")
-//                    
-//                case "managements":
-//                    print("managements")
-//                    
-//                case "category_managements":
-//                    print("category_managements")
-//                    
-//                case "feedings":
-//                    print("feedings")
-//                    
-//                case "transports":
-//                    print("transports")
-//                    
-//                case "shifts":
-//                    print("shifts")
-//                    
-//                case "schedules":
-//                    print("schedules")
-//                    
-//                case "places":
-//                    print("places")
-//                    
-//                default:
-//                    print("Padrao")
-//                }
-//
-//            }
-        
+            
         }catch{
             print(error)
         }
@@ -255,14 +262,9 @@ class LoadingViewController: UIViewController {
         let methodFinally = Date()
         let execulteTime = methodFinally.timeIntervalSince(methodStart)
         print(execulteTime)
-        
+        //SVProgressHUD.dismiss()
         
     }
-    
-    
-  
-
-
     
 
 }

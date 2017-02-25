@@ -90,10 +90,34 @@ class BuildingMapsViewController: UIViewController, MKMapViewDelegate  {
 //
 //
 //    }
-
-
-//    }
     
+    
+    func novafuncao(){
+    
+//        coordinates = [[48.85672,2.35501],[48.85196,2.33944],[48.85376,2.33953]]// Latitude,Longitude
+//        names = ["Coffee Shop · Rue de Rivoli","Cafe · Boulevard Saint-Germain","Coffee Shop · Rue Saint-André des Arts"]
+//        addresses = ["46 Rue de Rivoli, 75004 Paris, France","91 Boulevard Saint-Germain, 75006 Paris, France","62 Rue Saint-André des Arts, 75006 Paris, France"]
+//        phones = ["+33144789478","+33146345268","+33146340672"]
+//        self.mapView.delegate = self
+//        // 2
+//        for i in 0...2
+//        {
+//            let coordinate = coordinates[i]
+//            let point = StarbucksAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate[0] , longitude: coordinate[1] ))
+//            point.image = UIImage(named: "starbucks-\(i+1).jpg")
+//            point.name = names[i]
+//            point.address = addresses[i]
+//            point.phone = phones[i]
+//            self.mapView.addAnnotation(point)
+//        }
+        
+        
+        
+
+    }
+
+
+
     
     func CallAlomo(url:String){
         Alamofire.request(url).responseJSON(completionHandler: {
@@ -134,7 +158,6 @@ class BuildingMapsViewController: UIViewController, MKMapViewDelegate  {
             
             OperationQueue.main.addOperation {
                 SVProgressHUD.dismiss()
-                self.mapa.reloadInputViews()
             }
         
             

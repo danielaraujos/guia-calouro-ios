@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0P9-9O-yYC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bMH-av-qQ7">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,12 +39,22 @@
                     <view key="view" contentMode="scaleToFill" id="20R-na-Px1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-kA-ov4">
+                                <rect key="frame" x="126" y="269" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Provisorio"/>
+                                <connections>
+                                    <segue destination="0P9-9O-yYC" kind="show" id="T71-wI-ya6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K89-fy-hmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1811" y="881"/>
+            <point key="canvasLocation" x="-1543.125" y="409.85915492957747"/>
         </scene>
         <!--Building View Controller-->
         <scene sceneID="fLI-OM-IHh">
@@ -324,17 +334,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-mi-uzG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HeE-mi-uzG" firstAttribute="leading" secondItem="M1z-i1-vCJ" secondAttribute="leading" id="777-et-PLY"/>
-                            <constraint firstItem="HeE-mi-uzG" firstAttribute="top" secondItem="M1z-i1-vCJ" secondAttribute="top" id="C5s-Io-muK"/>
-                            <constraint firstAttribute="trailing" secondItem="HeE-mi-uzG" secondAttribute="trailing" id="Ogo-Ep-2RS"/>
-                            <constraint firstItem="Eiy-sI-y0C" firstAttribute="top" secondItem="HeE-mi-uzG" secondAttribute="bottom" id="lZB-Dm-hrq"/>
+                            <constraint firstItem="HeE-mi-uzG" firstAttribute="top" secondItem="M1z-i1-vCJ" secondAttribute="top" id="CuE-D1-wfD"/>
+                            <constraint firstItem="Eiy-sI-y0C" firstAttribute="top" secondItem="HeE-mi-uzG" secondAttribute="bottom" id="IrU-Qr-Tw5"/>
+                            <constraint firstItem="HeE-mi-uzG" firstAttribute="leading" secondItem="M1z-i1-vCJ" secondAttribute="leading" id="VxR-2F-yd6"/>
+                            <constraint firstAttribute="trailing" secondItem="HeE-mi-uzG" secondAttribute="trailing" id="iXu-L0-uuy"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Teste" id="hVE-5o-1aJ"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapa" destination="HeE-mi-uzG" id="jvY-x8-WPD"/>
                     </connections>
@@ -433,7 +447,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cvL-We-MmI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0P9-9O-yYC" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="navigation" storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="0P9-9O-yYC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j7l-oa-bOr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -585,12 +599,49 @@
                     <view key="view" contentMode="scaleToFill" id="MNN-Tz-AJ5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-Kb-r2h">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-Hh-OK5">
+                                <rect key="frame" x="0.0" y="309" width="320" height="259"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransportesCell" id="M2G-zT-Nrn">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M2G-zT-Nrn" id="IqH-0d-fll">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3wA-1M-Nie" id="YL0-xW-D97"/>
+                                    <outlet property="delegate" destination="3wA-1M-Nie" id="tQY-yj-kXK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="top" secondItem="MNN-Tz-AJ5" secondAttribute="top" id="3XD-Ee-Eg2"/>
+                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="ZEy-Kb-r2h" secondAttribute="bottom" constant="258" id="5Kx-a0-C6B"/>
+                            <constraint firstAttribute="trailing" secondItem="sU4-Hh-OK5" secondAttribute="trailing" id="Lyd-Vn-UhC"/>
+                            <constraint firstItem="ZEy-Kb-r2h" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="OEl-1m-DRD"/>
+                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="top" secondItem="MMt-wm-Mxm" secondAttribute="bottom" constant="289" id="OW9-im-ZpX"/>
+                            <constraint firstItem="sU4-Hh-OK5" firstAttribute="leading" secondItem="MNN-Tz-AJ5" secondAttribute="leading" id="ZhM-2R-A3n"/>
+                            <constraint firstAttribute="trailing" secondItem="ZEy-Kb-r2h" secondAttribute="trailing" id="xMN-3p-5RO"/>
+                            <constraint firstItem="1N9-Hm-dI6" firstAttribute="top" secondItem="sU4-Hh-OK5" secondAttribute="bottom" id="y7c-Zp-H9R"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapa" destination="ZEy-Kb-r2h" id="tke-L2-lri"/>
+                        <outlet property="tableView" destination="sU4-Hh-OK5" id="Mui-Yh-Y5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b00-Aq-piP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="3062"/>
+            <point key="canvasLocation" x="159.375" y="3061.2676056338028"/>
         </scene>
         <!--Useful View Controller-->
         <scene sceneID="3Rz-rl-NuT">

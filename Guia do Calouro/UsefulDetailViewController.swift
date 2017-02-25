@@ -44,9 +44,8 @@ class UsefulDetailViewController: UIViewController, UITableViewDataSource, UITab
             return 1
         }else if section == 3{
             return 1
-        }else {
-            return 0
         }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

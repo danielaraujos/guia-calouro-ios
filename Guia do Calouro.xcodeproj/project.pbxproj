@@ -54,6 +54,9 @@
 		4CC4D6DB1E60E92100BD8C86 /* BuildingMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6DA1E60E92100BD8C86 /* BuildingMapsViewController.swift */; };
 		4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */; };
 		4CC85F101E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC85F0F1E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift */; };
+		4CE38B851E61D566009C2ECE /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE38B841E61D566009C2ECE /* Shift.swift */; };
+		4CE38B871E61DEE1009C2ECE /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE38B861E61DEE1009C2ECE /* Schedule.swift */; };
+		4CE38B891E61DFA3009C2ECE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE38B881E61DFA3009C2ECE /* Place.swift */; };
 		4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */; };
 		4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */; };
 		4CEBDE191E4B226A005E3ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEBDE171E4B226A005E3ADC /* Main.storyboard */; };
@@ -115,6 +118,9 @@
 		4CC4D6DA1E60E92100BD8C86 /* BuildingMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingMapsViewController.swift; sourceTree = "<group>"; };
 		4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4CC85F0F1E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsDetailsViewController.swift; sourceTree = "<group>"; };
+		4CE38B841E61D566009C2ECE /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		4CE38B861E61DEE1009C2ECE /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		4CE38B881E61DFA3009C2ECE /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		4CEBDE101E4B226A005E3ADC /* Guia do Calouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guia do Calouro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 				4CA9C65D1E5BA93600B92742 /* Type.swift */,
 				4CA9C6611E5BD34000B92742 /* CManagement.swift */,
 				4CA9C6651E5BD7BA00B92742 /* Management.swift */,
+				4CE38B841E61D566009C2ECE /* Shift.swift */,
+				4CE38B861E61DEE1009C2ECE /* Schedule.swift */,
+				4CE38B881E61DFA3009C2ECE /* Place.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 				4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */,
 				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
 				4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */,
+				4CE38B891E61DFA3009C2ECE /* Place.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
 				4CC4D6D81E60D8E500BD8C86 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				4CA9C6641E5BD3EA00B92742 /* CManagementsViewController.swift in Sources */,
@@ -529,6 +539,7 @@
 				4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */,
 				4C08A09F1E4B28150022A8B2 /* BaseViewController.swift in Sources */,
 				4CA9C6661E5BD7BA00B92742 /* Management.swift in Sources */,
+				4CE38B871E61DEE1009C2ECE /* Schedule.swift in Sources */,
 				4CC85F101E51D8EC00DA0CF3 /* BenefitsDetailsViewController.swift in Sources */,
 				4CA9C6621E5BD34000B92742 /* CManagement.swift in Sources */,
 				4CEBDE141E4B226A005E3ADC /* AppDelegate.swift in Sources */,
@@ -536,6 +547,7 @@
 				4CEBDE1C1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld in Sources */,
 				4CAA7FDD1E4E957400C259FC /* Calendar.swift in Sources */,
 				4CC4D6D91E60D8E500BD8C86 /* KCFloatingActionButtonItem.swift in Sources */,
+				4CE38B851E61D566009C2ECE /* Shift.swift in Sources */,
 				4CA9C65E1E5BA93600B92742 /* Type.swift in Sources */,
 				4CC4D6D41E60D8E500BD8C86 /* KCFABManager.swift in Sources */,
 				4CC4D6D51E60D8E500BD8C86 /* KCFABViewController.swift in Sources */,
