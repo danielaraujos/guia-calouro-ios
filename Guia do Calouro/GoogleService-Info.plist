@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>579835872553-2eeomujr02g8rogllc395l0rvaa1d7ar.apps.googleusercontent.com</string>
+	<string>579835872553-j22dpvutpf5cmdn3ihmdogpk6q3u6bh0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.579835872553-2eeomujr02g8rogllc395l0rvaa1d7ar</string>
+	<string>com.googleusercontent.apps.579835872553-j22dpvutpf5cmdn3ihmdogpk6q3u6bh0</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAb15bbSIJIHpMZVszpGQ5XIGIjAmEg-Dc</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.danielaraujos.guiaDoCalouro</string>
+	<string>com.danielaraujos.guia-do-calouro</string>
 	<key>PROJECT_ID</key>
 	<string>guia-do-calouro</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:579835872553:ios:dcfb9dfcc7935566</string>
+	<string>1:579835872553:ios:c5ff2bcd7394d5d3</string>
 	<key>DATABASE_URL</key>
 	<string>https://guia-do-calouro.firebaseio.com</string>
 </dict>

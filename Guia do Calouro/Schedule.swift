@@ -18,6 +18,7 @@ class Schedule {
     
     
     var id: Int?
+    var name: String?
     var ida:String?
     var intervalo: String?
     var volta: String?
@@ -25,9 +26,15 @@ class Schedule {
     
     var array = [Shift]()
     
-    init(id: Int,name: String, intervalo: String, volta:String, shifts_id: Int) {
+    init(id: Int, name:String, shifts_id: Int) {
         self.id = id
-        self.ida = name
+        self.name = name
+        self.shifts_id = shifts_id
+    }
+    
+    init(id: Int,ida: String, intervalo: String, volta:String, shifts_id: Int) {
+        self.id = id
+        self.ida = ida
         self.intervalo = intervalo
         self.volta = volta
         self.shifts_id = shifts_id
@@ -35,6 +42,7 @@ class Schedule {
     
     init(array : [String: AnyObject]) {
         id = array["id"] as? Int
+        name = array["name"] as? String
         ida = array["ida"] as? String
         volta = array["intervalo"] as? String
         intervalo = array["volta"] as? String

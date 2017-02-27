@@ -12,9 +12,10 @@
 		4C12C23D1E4F665200BAC0BD /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */; };
 		4C12C2401E4F667B00BAC0BD /* BenefitsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */; };
 		4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2411E4F668800BAC0BD /* Benefit.swift */; };
+		4C190DAE1E63BF360086066A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C190DAD1E63BF360086066A /* GoogleService-Info.plist */; };
+		4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C190DB01E63C0410086066A /* UserNotifications.framework */; };
 		4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20D1331E5D2132004EB158 /* ManagementDetailViewController.swift */; };
 		4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C223BE91E513D3F00374EF2 /* Useful.swift */; };
-		4C223BEC1E51444500374EF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */; };
 		4C347F781E568E6300D4E3FC /* UsefulDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C347F771E568E6300D4E3FC /* UsefulDetailViewController.swift */; };
 		4C64DF761E567556003952B0 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C64DF751E567556003952B0 /* Email.swift */; };
 		4C7B797C1E50DB4C0027FD21 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B797B1E50DB4C0027FD21 /* TransportsViewController.swift */; };
@@ -74,9 +75,11 @@
 		4C12C23C1E4F665200BAC0BD /* BenefitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenefitsCelula.swift; sourceTree = "<group>"; };
 		4C12C2411E4F668800BAC0BD /* Benefit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
+		4C190DAD1E63BF360086066A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C190DAF1E63BFA30086066A /* Guia do Calouro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Guia do Calouro.entitlements"; sourceTree = "<group>"; };
+		4C190DB01E63C0410086066A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		4C20D1331E5D2132004EB158 /* ManagementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementDetailViewController.swift; sourceTree = "<group>"; };
 		4C223BE91E513D3F00374EF2 /* Useful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Useful.swift; sourceTree = "<group>"; };
-		4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C347F771E568E6300D4E3FC /* UsefulDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulDetailViewController.swift; sourceTree = "<group>"; };
 		4C64DF751E567556003952B0 /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		4C7B79771E50D2420027FD21 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */,
 				4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */,
 				96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */,
 			);
@@ -148,6 +152,7 @@
 		27D034618BD8632A2B7101DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C190DB01E63C0410086066A /* UserNotifications.framework */,
 				4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */,
 				4C7B79791E50D2610027FD21 /* Alamofire.framework */,
 				4C7B79771E50D2420027FD21 /* AlamofireImage.framework */,
@@ -350,6 +355,7 @@
 		4CEBDE121E4B226A005E3ADC /* Guia do Calouro */ = {
 			isa = PBXGroup;
 			children = (
+				4C190DAF1E63BFA30086066A /* Guia do Calouro.entitlements */,
 				4C08A0A41E4B28360022A8B2 /* Providers */,
 				4C08A0A31E4B28280022A8B2 /* Controller */,
 				4C08A0A21E4B28220022A8B2 /* View */,
@@ -357,10 +363,10 @@
 				4CEBDE131E4B226A005E3ADC /* AppDelegate.swift */,
 				4CC4D6D31E60D8E500BD8C86 /* KCFloatingActionButton */,
 				4CEBDE171E4B226A005E3ADC /* Main.storyboard */,
-				4C223BEB1E51444500374EF2 /* GoogleService-Info.plist */,
 				4CEBDE1D1E4B226A005E3ADC /* Assets.xcassets */,
 				4CEBDE1F1E4B226A005E3ADC /* LaunchScreen.storyboard */,
 				4CEBDE221E4B226A005E3ADC /* Info.plist */,
+				4C190DAD1E63BF360086066A /* GoogleService-Info.plist */,
 				4CEBDE1A1E4B226A005E3ADC /* Guia_do_Calouro.xcdatamodeld */,
 			);
 			path = "Guia do Calouro";
@@ -412,6 +418,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZX8B9U4537;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -438,8 +452,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C190DAE1E63BF360086066A /* GoogleService-Info.plist in Resources */,
 				4CEBDE211E4B226A005E3ADC /* LaunchScreen.storyboard in Resources */,
-				4C223BEC1E51444500374EF2 /* GoogleService-Info.plist in Resources */,
 				4CEBDE1E1E4B226A005E3ADC /* Assets.xcassets in Resources */,
 				4CEBDE191E4B226A005E3ADC /* Main.storyboard in Resources */,
 			);
@@ -674,11 +688,12 @@
 			baseConfigurationReference = 084F314292C7D77FC2FEBCCC /* Pods-Guia do Calouro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Guia do Calouro/Guia do Calouro.entitlements";
 				DEVELOPMENT_TEAM = ZX8B9U4537;
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielaraujos.guiaDoCalouro;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.danielaraujos.guia-do-calouro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -689,11 +704,12 @@
 			baseConfigurationReference = 12B936D2247FC6D15261B6D9 /* Pods-Guia do Calouro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Guia do Calouro/Guia do Calouro.entitlements";
 				DEVELOPMENT_TEAM = ZX8B9U4537;
 				INFOPLIST_FILE = "Guia do Calouro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danielaraujos.guiaDoCalouro;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.danielaraujos.guia-do-calouro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

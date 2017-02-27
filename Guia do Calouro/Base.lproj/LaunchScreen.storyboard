@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logomarca" translatesAutoresizingMaskIntoConstraints="NO" id="TCf-Lg-8Tb">
-                                <rect key="frame" x="86" y="211" width="149" height="146"/>
+                                <rect key="frame" x="113" y="260" width="149" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

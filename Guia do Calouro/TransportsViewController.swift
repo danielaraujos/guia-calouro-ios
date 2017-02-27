@@ -16,8 +16,10 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
     
     @IBOutlet weak var mapa: MKMapView!
     @IBOutlet weak var tableView: UITableView!
-    var chave = "schedules"
+   
     var schedules = [Schedule]()
+    var schedulesTarde = [Schedule]()
+    var schedulesNoite = [Schedule]()
     
     
     override func viewDidLoad() {
@@ -29,7 +31,8 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         let backItem = UIBarButtonItem()
         backItem.title = " "
         navigationItem.backBarButtonItem = backItem
-        
+    
+        self.getListagem()
         self.localizacaoMaps()
     
     }
@@ -88,20 +91,39 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
     }
     
     
-    /*
-     Transports	Listagem de Transporte
-     Shifts	Listagem de turno
-     Schedules	Listagem de Horário	
-     Places	Listagem de locais
-     
-     
-     self.CallAlomo(url: self.transports!,valueCall: "transports",valueKey: "transports");
-     self.CallAlomo(url: self.shifts! ,valueCall: "shifts",valueKey: "shifts");
-     self.CallAlomo(url: self.schedules!,valueCall: "schedules",valueKey: "schedules");
-     self.CallAlomo(url: self.places! ,valueCall: "places",valueKey: "places");
-     
-     */
-    
+    func getListagem(){
+        var schedules: Schedule;
+        schedules = Schedule(id: 1, name: "Ida: 7:30 - 07:50", shifts_id: 1)
+        self.schedules.append(schedules)
+        
+        schedules = Schedule(id: 2, name: "Intervalo: 09:30 - 10-00", shifts_id: 1)
+        self.schedules.append(schedules)
+        
+        schedules = Schedule(id: 3, name: "Volta: 11:30", shifts_id: 1)
+        self.schedules.append(schedules)
+        
+        schedules = Schedule(id: 4, name: "Ida: 13:30 - 13:50", shifts_id: 2)
+        self.schedulesTarde.append(schedules)
+        
+        schedules = Schedule(id: 5, name: "Intervalo: 15:30 - 16:00", shifts_id: 2)
+        self.schedulesTarde.append(schedules)
+        
+        schedules = Schedule(id: 6, name: "Volta: 17:30", shifts_id: 2)
+        self.schedulesTarde.append(schedules)
+        
+        schedules = Schedule(id: 7, name: "Ida: 18:30 - 18:50", shifts_id: 3)
+        self.schedulesNoite.append(schedules)
+        
+        schedules = Schedule(id: 8, name: "Intervalo: 20:30 - 21:00", shifts_id: 3)
+        self.schedulesNoite.append(schedules)
+        
+        schedules = Schedule(id: 9, name: "Volta: 22:30", shifts_id: 3)
+        self.schedulesNoite.append(schedules)
+        
+        
+        
+    }
+
     
   
     
@@ -111,14 +133,15 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return self.schedules.count
         }else if section == 1{
-            return 3
+            return self.schedulesTarde.count
         }else if section == 2{
-            return 3
-        }else {
-            return 0
+            return self.schedulesNoite.count
         }
+        return 0
+        
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -134,23 +157,26 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let s = self.schedules[indexPath.row]
+        let t = self.schedulesTarde[indexPath.row]
+        let n = self.schedulesNoite[indexPath.row]
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransportesCell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = "ida: 1"
-        }else if indexPath.section == 1{
-            cell.textLabel?.text = "ida: 2"
-        }else if indexPath.section == 2{
-            cell.textLabel?.text = "ida: 3"
+            cell.textLabel?.text = s.name!
+        }else if indexPath.section == 1 {
+            cell.textLabel?.text = t.name!
+        }else if indexPath.section == 2 {
+            cell.textLabel?.text = n.name!
         }
 
+            
+        
+        
         return cell
     }
-    
-    
-    
-  
-    
     
     
 }
