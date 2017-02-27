@@ -186,12 +186,14 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
     func filterContentForSearch(searchString:String){
        
         if (self.pGet.id! == 1){
-            self.filterTelephones = self.filterTelephones.filter(){
+            self.filterTelephones = self.telephones.filter(){
                 nil != $0.name?.range(of: searchString)
             }
+            
+            self.tableView.reloadData()
         }
         else{
-            self.filterEmails = self.filterEmails.filter(){
+            self.filterEmails = self.emails.filter(){
                 nil != $0.name?.range(of: searchString)
             }
             
@@ -209,18 +211,32 @@ class PUsefulViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UsefulDetailCell"{
             if let indexPath = tableView.indexPathForSelectedRow{
                 if(self.pGet.id! == 1){
-                    let select = self.telephones[indexPath.row]
-                    let viewControllerDestino = segue.destination as! UsefulDetailViewController
-                    viewControllerDestino.telephone = select
+                    if searchController.isActive && searchController.searchBar.text != ""{
+                        let select = self.filterTelephones[indexPath.row]
+                        let viewControllerDestino = segue.destination as! UsefulDetailViewController
+                        viewControllerDestino.telephone = select
+                    }else{
+                        let select = self.telephones[indexPath.row]
+                        let viewControllerDestino = segue.destination as! UsefulDetailViewController
+                        viewControllerDestino.telephone = select
+                    }
+
                 }else{
-                    let select = self.emails[indexPath.row]
-                    let viewControllerDestino = segue.destination as! UsefulDetailViewController
-                    viewControllerDestino.email = select
+                    if searchController.isActive && searchController.searchBar.text != ""{
+                        let select = self.filterEmails[indexPath.row]
+                        let viewControllerDestino = segue.destination as! UsefulDetailViewController
+                        viewControllerDestino.email = select
+                    }else{
+                        let select = self.emails[indexPath.row]
+                        let viewControllerDestino = segue.destination as! UsefulDetailViewController
+                        viewControllerDestino.email = select
+                    }
                 }
             }
         }
