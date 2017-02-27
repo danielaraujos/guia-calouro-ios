@@ -46,6 +46,7 @@
 		4CAA7FE01E4E99A600C259FC /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */; };
 		4CAA7FE21E4EA0D100C259FC /* MonthCalendarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */; };
 		4CAB67DF1E645BCD001E192C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB67DE1E645BCD001E192C /* About.swift */; };
+		4CAB67E11E64694C001E192C /* Feeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB67E01E64694C001E192C /* Feeding.swift */; };
 		4CB5374E1E4B39B000E957B4 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5374D1E4B39B000E957B4 /* Connection.swift */; };
 		4CC4D6D41E60D8E500BD8C86 /* KCFABManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6CD1E60D8E500BD8C86 /* KCFABManager.swift */; };
 		4CC4D6D51E60D8E500BD8C86 /* KCFABViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4D6CE1E60D8E500BD8C86 /* KCFABViewController.swift */; };
@@ -113,6 +114,7 @@
 		4CAA7FDF1E4E99A600C259FC /* MonthCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
 		4CAA7FE11E4EA0D100C259FC /* MonthCalendarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCalendarsViewController.swift; sourceTree = "<group>"; };
 		4CAB67DE1E645BCD001E192C /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		4CAB67E01E64694C001E192C /* Feeding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeding.swift; sourceTree = "<group>"; };
 		4CB5374D1E4B39B000E957B4 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		4CC4D6CD1E60D8E500BD8C86 /* KCFABManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KCFABManager.swift; path = ../../Sources/KCFABManager.swift; sourceTree = "<group>"; };
 		4CC4D6CE1E60D8E500BD8C86 /* KCFABViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KCFABViewController.swift; path = ../../Sources/KCFABViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				4CE38B861E61DEE1009C2ECE /* Schedule.swift */,
 				4CE38B881E61DFA3009C2ECE /* Place.swift */,
 				4CAB67DE1E645BCD001E192C /* About.swift */,
+				4CAB67E01E64694C001E192C /* Feeding.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */,
 				4CE38B891E61DFA3009C2ECE /* Place.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,
+				4CAB67E11E64694C001E192C /* Feeding.swift in Sources */,
 				4CC4D6D81E60D8E500BD8C86 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				4CA9C6641E5BD3EA00B92742 /* CManagementsViewController.swift in Sources */,
 				4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */,

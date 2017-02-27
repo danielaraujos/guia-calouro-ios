@@ -48,11 +48,21 @@ class CTypsViewController: BaseViewController , UITableViewDelegate, UITableView
             //print(json)
             
             if carregamento != nil{
-                let categoriesDictionaries = carregamento["cTypes"] as! [[String:AnyObject]]
-                for categoryDictionary in categoriesDictionaries{
-                    let new = CType(array: categoryDictionary)
-                    self.category.append(new)
+                if json != carregamento{
+                    URLCache.shared.removeAllCachedResponses()
+                    let categoriessDictionaries = json["cTypes"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriessDictionaries{
+                        let new = CType(array: categoryDictionary)
+                        self.category.append(new)
+                    }
+                }else{
+                    let categoriesDictionaries = carregamento["cTypes"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriesDictionaries{
+                        let new = CType(array: categoryDictionary)
+                        self.category.append(new)
+                    }
                 }
+                
                 
             }else{
                 let categoriessDictionaries = json["cTypes"] as! [[String:AnyObject]]

@@ -51,21 +51,40 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
             
+           // print(json)
+            
             if carregamento != nil{
-                let typsDictionaries = carregamento["typs"] as! [[String:AnyObject]]
-                for typeDictionary in typsDictionaries{
-                    let new = Type(array: typeDictionary)
-                    self.typs.append(new)
-                }
-                
-                for type in typs{
-                    if( conteudo.id! == type.category_typ_id!){
-                        let new = Type(id: type.id!, name: type.name!, body: type.body!, name_link: type.name_link!, link: type.link!, category_typ_id: type.category_typ_id!)
-                        self.tmp.append(new)
-
+                if json != carregamento {
+                    let typsDictionaries = json["typs"] as! [[String:AnyObject]]
+                    for typeDictionary in typsDictionaries{
+                        let new = Type(array: typeDictionary)
+                        self.typs.append(new)
                     }
-                }
+                    for type in typs{
+                        if( conteudo.id! == type.category_typ_id!){
+                            let new = Type(id: type.id!, name: type.name!, body: type.body!, name_link: type.name_link!, link: type.link!, category_typ_id: type.category_typ_id!)
+                            self.tmp.append(new)
+                            
+                        }
+                    }
                 
+                }else{
+                    let typsDictionaries = carregamento["typs"] as! [[String:AnyObject]]
+                    for typeDictionary in typsDictionaries{
+                        let new = Type(array: typeDictionary)
+                        self.typs.append(new)
+                    }
+                    
+                    for type in typs{
+                        if( conteudo.id! == type.category_typ_id!){
+                            let new = Type(id: type.id!, name: type.name!, body: type.body!, name_link: type.name_link!, link: type.link!, category_typ_id: type.category_typ_id!)
+                            self.tmp.append(new)
+                            
+                        }
+                    }
+                    
+                
+                }
                 
             }else{
                 let typsDictionaries = json["typs"] as! [[String:AnyObject]]

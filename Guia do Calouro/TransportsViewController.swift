@@ -56,7 +56,7 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         ponto1.coordinate.longitude = -46.2474
         ponto1.coordinate = localizacao
         ponto1.title = "Ponto 1 "
-        ponto1.subtitle = "Praça Central"
+        ponto1.subtitle = "Rua Otaviano Rosa(Praça da Igreja)"
         
         
         
@@ -64,26 +64,26 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         ponto2.coordinate.latitude = -19.1956
         ponto2.coordinate.longitude = -46.2448
         ponto2.title = "Ponto 2"
-        ponto2.subtitle = "Ponto 2 "
+        ponto2.subtitle = "Rua Ver. Antônio de Carvalho (Igreja do Rosário) "
         
         
         let ponto3 = MKPointAnnotation()
         ponto3.coordinate.latitude = -19.1971
         ponto3.coordinate.longitude = -46.2418
         ponto3.title = "Ponto 3"
-        ponto3.subtitle = "Ponto 3"
+        ponto3.subtitle = "Rua Vereador Augusto Antonio de Carvalho"
         
         let ponto4 = MKPointAnnotation()
         ponto4.coordinate.latitude = -19.1980
         ponto4.coordinate.longitude = -46.2374
         ponto4.title = "Ponto 4"
-        ponto4.subtitle = "Ponto 4"
+        ponto4.subtitle = "Rua Cap. Franklin de Castro (Posto Geraldinho)"
         
         let ponto5 = MKPointAnnotation()
         ponto5.coordinate.latitude = -19.2010
         ponto5.coordinate.longitude = -46.2373
         ponto5.title = "Ponto 5"
-        ponto5.subtitle = "Ponto 5"
+        ponto5.subtitle = "Rua São Gotardo (Ribeiro 2)"
         
         
         mapa.addAnnotations([ponto1, ponto2,ponto3,ponto4, ponto5])
@@ -119,13 +119,8 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         
         schedules = Schedule(id: 9, name: "Volta: 22:30", shifts_id: 3)
         self.schedulesNoite.append(schedules)
-        
-        
-        
+       
     }
-
-    
-  
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -140,8 +135,6 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
             return self.schedulesNoite.count
         }
         return 0
-        
-        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -171,10 +164,6 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         }else if indexPath.section == 2 {
             cell.textLabel?.text = n.name!
         }
-
-            
-        
-        
         return cell
     }
     

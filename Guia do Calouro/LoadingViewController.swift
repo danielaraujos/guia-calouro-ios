@@ -35,7 +35,7 @@ class LoadingViewController: UIViewController {
         
         self.urlProviders();
         self.CallUrls();
-        self.redirecionar()
+        //self.redirecionar()
     }
     
     func redirecionar(){
@@ -126,6 +126,7 @@ class LoadingViewController: UIViewController {
             //print(json)
             
             if json != carregamento {
+                //URLCache.shared.removeAllCachedResponses()
                 print("Pegando do servidor")
                 switch value {
                 case "buildings":

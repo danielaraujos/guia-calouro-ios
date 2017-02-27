@@ -50,10 +50,21 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
             
             if carregamento != nil{
-                let benefitsDictionaries = carregamento["benefits"] as! [[String:AnyObject]]
-                for benefitDictionary in benefitsDictionaries{
-                    let newBenefits = Benefit(array: benefitDictionary)
-                    self.benefits.append(newBenefits)
+                if json != carregamento {
+                    let benefitsDictionaries = json["benefits"] as! [[String:AnyObject]]
+                    for benefitDictionary in benefitsDictionaries{
+                        let newBenefits = Benefit(array: benefitDictionary)
+                        self.benefits.append(newBenefits)
+                    }
+                    
+                }else{
+                    let benefitsDictionaries = carregamento["benefits"] as! [[String:AnyObject]]
+                    for benefitDictionary in benefitsDictionaries{
+                        let newBenefits = Benefit(array: benefitDictionary)
+                        self.benefits.append(newBenefits)
+                    }
+
+                
                 }
 
                 
