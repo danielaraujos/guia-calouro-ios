@@ -30,6 +30,8 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
         let urlMonth = UrlProvider.Instance.lerUrl(sufix: "month-calendars.json")
         
         self.CallAlomo(urlMonth:urlMonth);
+        
+        
     }
 
     func CallAlomo(urlMonth:String){
@@ -42,17 +44,22 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
     
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
-        
         SVProgressHUD.show(withStatus: "Carregando")
-        
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
             if carregamento != nil{
-               
-                let monthDictionaries = carregamento["monthCalendars"] as! [[String:AnyObject]]
-                for monthDictionary in monthDictionaries{
-                    let newMonth = MonthCalendar(array: monthDictionary)
-                    self.months.append(newMonth)
+                if carregamento != json {
+                    let monthDictionaries = json["monthCalendars"] as! [[String:AnyObject]]
+                    for monthDictionary in monthDictionaries{
+                        let newMonth = MonthCalendar(array: monthDictionary)
+                        self.months.append(newMonth)
+                    }
+                }else{
+                    let monthDictionaries = carregamento["monthCalendars"] as! [[String:AnyObject]]
+                    for monthDictionary in monthDictionaries{
+                        let newMonth = MonthCalendar(array: monthDictionary)
+                        self.months.append(newMonth)
+                    }
                 }
                 
             }else{
@@ -64,6 +71,8 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
                 }
             }
             
+            
+            
             OperationQueue.main.addOperation {
                 SVProgressHUD.dismiss()
                 self.tableView.reloadData()
@@ -72,7 +81,7 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
         
     }
@@ -114,5 +123,5 @@ class CalendarsViewController: BaseViewController, UITableViewDataSource, UITabl
         alertaController.addAction(alertaAction)
         present(alertaController, animated: true, completion: nil)
     }
-
+    
 }

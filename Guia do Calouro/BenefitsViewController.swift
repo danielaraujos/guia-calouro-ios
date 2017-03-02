@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import SVProgressHUD
+import Foundation
+import SwiftyJSON
 
 class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -29,7 +31,7 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
         
         let url = UrlProvider.Instance.lerUrl(sufix: "benefits.json")
         self.CallAlomo(url: url)
-        
+
     }
     
     func CallAlomo(url:String){
@@ -40,18 +42,21 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
         
     }
     
+    
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
-        
-
+    
         SVProgressHUD.show(withStatus: "Carregando")
         
         do{
-            let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+            
+            let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as? NSDictionary
+            
+            //print(json)
             
             if carregamento != nil{
                 if json != carregamento {
-                    let benefitsDictionaries = json["benefits"] as! [[String:AnyObject]]
+                    let benefitsDictionaries = json?["benefits"] as! [[String:AnyObject]]
                     for benefitDictionary in benefitsDictionaries{
                         let newBenefits = Benefit(array: benefitDictionary)
                         self.benefits.append(newBenefits)
@@ -63,14 +68,12 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
                         let newBenefits = Benefit(array: benefitDictionary)
                         self.benefits.append(newBenefits)
                     }
-
-                
                 }
 
                 
             }else{
                 print("Encontrou nulo")
-                let benefitsDictionaries = json["benefits"] as! [[String:AnyObject]]
+                let benefitsDictionaries = json?["benefits"] as! [[String:AnyObject]]
                 for benefitDictionary in benefitsDictionaries{
                     let newBenefits = Benefit(array: benefitDictionary)
                     self.benefits.append(newBenefits)
@@ -85,10 +88,8 @@ class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableVi
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
-        
-        
     }
     
     

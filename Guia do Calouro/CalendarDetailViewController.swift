@@ -32,19 +32,10 @@ class CalendarDetailViewController: UIViewController {
     }
 
     func shared(){
-        print(self.calendar)
-        print("compartilhando")
-        let textToShare = "Guia do Calouro - Calendário"
-        if let myWebsite = NSURL(string: self.calendar) {
-            let objectsToShare = [textToShare, myWebsite] as [Any]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            
-            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
-            
-            activityVC.popoverPresentationController?.sourceView = self.view
-            
-            self.present(activityVC, animated: true, completion: nil)
-        }
+        
+        let activitiVC = UIActivityViewController(activityItems: [self.calendar], applicationActivities: nil)
+        activitiVC.popoverPresentationController?.sourceView = self.view
+        self.present(activitiVC, animated: true, completion: nil)
     }
 
 }

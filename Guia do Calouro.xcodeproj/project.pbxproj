@@ -14,6 +14,7 @@
 		4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2411E4F668800BAC0BD /* Benefit.swift */; };
 		4C190DAE1E63BF360086066A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C190DAD1E63BF360086066A /* GoogleService-Info.plist */; };
 		4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C190DB01E63C0410086066A /* UserNotifications.framework */; };
+		4C1963531E65F64000E55911 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1963521E65F64000E55911 /* SwiftyJSON.framework */; };
 		4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20D1331E5D2132004EB158 /* ManagementDetailViewController.swift */; };
 		4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C223BE91E513D3F00374EF2 /* Useful.swift */; };
 		4C347F781E568E6300D4E3FC /* UsefulDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C347F771E568E6300D4E3FC /* UsefulDetailViewController.swift */; };
@@ -27,7 +28,6 @@
 		4C7B798D1E50DF2D0027FD21 /* AboutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B798C1E50DF2D0027FD21 /* AboutsViewController.swift */; };
 		4C7F66FF1E5670DA007A2024 /* Telephone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F66FE1E5670DA007A2024 /* Telephone.swift */; };
 		4C7F67011E5671F7007A2024 /* PUsefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F67001E5671F7007A2024 /* PUsefulViewController.swift */; };
-		4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */; };
 		4C89A6721E4D19610007D9B5 /* UrlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6711E4D19610007D9B5 /* UrlProvider.swift */; };
 		4C89A6741E4E3E3F0007D9B5 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6731E4E3E3F0007D9B5 /* Building.swift */; };
 		4C89A6761E4E40EC0007D9B5 /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */; };
@@ -80,6 +80,7 @@
 		4C190DAD1E63BF360086066A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C190DAF1E63BFA30086066A /* Guia do Calouro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Guia do Calouro.entitlements"; sourceTree = "<group>"; };
 		4C190DB01E63C0410086066A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		4C1963521E65F64000E55911 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Guia_do_Calouro-gedkysvfysjhdnbcizmmqpsdbscn/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		4C20D1331E5D2132004EB158 /* ManagementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementDetailViewController.swift; sourceTree = "<group>"; };
 		4C223BE91E513D3F00374EF2 /* Useful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Useful.swift; sourceTree = "<group>"; };
 		4C347F771E568E6300D4E3FC /* UsefulDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulDetailViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		4C7B798C1E50DF2D0027FD21 /* AboutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutsViewController.swift; sourceTree = "<group>"; };
 		4C7F66FE1E5670DA007A2024 /* Telephone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Telephone.swift; sourceTree = "<group>"; };
 		4C7F67001E5671F7007A2024 /* PUsefulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUsefulViewController.swift; sourceTree = "<group>"; };
-		4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4C89A6711E4D19610007D9B5 /* UrlProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlProvider.swift; sourceTree = "<group>"; };
 		4C89A6731E4E3E3F0007D9B5 /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		4C89A6751E4E40EC0007D9B5 /* BuildingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1963531E65F64000E55911 /* SwiftyJSON.framework in Frameworks */,
 				4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */,
 				4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */,
 				96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */,
@@ -156,6 +157,7 @@
 		27D034618BD8632A2B7101DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C1963521E65F64000E55911 /* SwiftyJSON.framework */,
 				4C190DB01E63C0410086066A /* UserNotifications.framework */,
 				4CC4D6DC1E61053900BD8C86 /* CoreLocation.framework */,
 				4C7B79791E50D2610027FD21 /* Alamofire.framework */,
@@ -292,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				4CEBDE151E4B226A005E3ADC /* HomeViewController.swift */,
-				4C89A66F1E4D193A0007D9B5 /* LoadingViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -527,7 +528,6 @@
 				4C7B79871E50DE070027FD21 /* CTypsViewController.swift in Sources */,
 				4C89A67E1E4E50CF0007D9B5 /* BuildingDetailViewController.swift in Sources */,
 				4CAA7FDB1E4E955A00C259FC /* CalendarsViewController.swift in Sources */,
-				4C89A6701E4D193A0007D9B5 /* LoadingViewController.swift in Sources */,
 				4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */,
 				4CE38B891E61DFA3009C2ECE /* Place.swift in Sources */,
 				4CEBDE161E4B226A005E3ADC /* HomeViewController.swift in Sources */,

@@ -109,7 +109,7 @@ class TypsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
     }
     

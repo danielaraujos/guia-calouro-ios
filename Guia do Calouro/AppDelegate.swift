@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseMessaging
+
 //import CoreData
 
 @UIApplicationMain
@@ -17,10 +19,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FIRApp.configure()
+        
+        
+        //Notifications
+        let notificationTypes : UIUserNotificationType = [ UIUserNotificationType.alert,UIUserNotificationType.badge,UIUserNotificationType.sound]
+        let notificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
+        
+        application.registerForRemoteNotifications()
+        application.registerUserNotificationSettings(notificationSettings)
+        
+        
+        
         return true
     }
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+        print("%@", userInfo)
+        
+        
+    }
+    
+    func tokenRefreshNotificaiton(notification: NSNotification) {
+        let refreshedToken = FIRInstanceID.instanceID().token()!
+        print("InstanceID token: \(refreshedToken)")
+        
+        // Connect to FCM since connection may have failed when attempted before having a token.
+        connectToFcm()
+    }
+    
+    func connectToFcm() {
+        FIRMessaging.messaging().connect { (error) in
+            if (error != nil) {
+                print("Unable to connect with FCM. \(error)")
+            } else {
+                print("Connected to FCM.")
+            }
+        }
+    }
+    
+    
+    
+    
+    func tokenRefreshNotification(notification: NSNotification) {
+        if let refreshedToken = FIRInstanceID.instanceID().token() {
+            print("InstanceID token: \(refreshedToken)")
+        }
+        
+        // Connect to FCM since connection may have failed when attempted before having a token.
+        self.connectToFcm()
+    }
+
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

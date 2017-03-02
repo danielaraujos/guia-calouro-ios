@@ -86,7 +86,7 @@ class ManagementsViewController: UIViewController, UITabBarDelegate, UITableView
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            self.showAlert(title: "Ops. Ocorreu algum erro!", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
         
     }

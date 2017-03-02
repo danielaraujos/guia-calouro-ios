@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 import SVProgressHUD
+import MessageUI
 
-class AboutsViewController: BaseViewController {
+class AboutsViewController: BaseViewController,MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var textInfo: UITextView!
     
@@ -27,10 +28,6 @@ class AboutsViewController: BaseViewController {
         
         let url = UrlProvider.Instance.lerUrl(sufix: "abouts.json")
         self.CallAlomo(url: url)
-        
-        //textInfo.text = self.abouts[0].body
-        
-        //print(self.abouts)
         self.buttonFloat()
     }
     
@@ -38,41 +35,31 @@ class AboutsViewController: BaseViewController {
     func buttonFloat(){
         let fab = KCFloatingActionButton()
         fab.addItem("Compartilhar", icon: UIImage(named: "icShare")!, handler: { item in
-            let textToShare = "Baixe o Guia do Calouro - UFV/CRP"
-            if let myWebsite = NSURL(string: "https://itunes.apple.com/us/app/hinário-novo-cantico/id1200173802") {
-                let objectsToShare = [textToShare, myWebsite] as [Any]
-                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                
-                activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
-                
-                activityVC.popoverPresentationController?.sourceView = self.view
-                
-                self.present(activityVC, animated: true, completion: nil)
-            }
-            
+            let site = "https://itunes.apple.com/us/app/hinário-novo-cantico/id1200173802"
+            let activitiVC = UIActivityViewController(activityItems: [site], applicationActivities: nil)
+            activitiVC.popoverPresentationController?.sourceView = self.view
+            self.present(activitiVC, animated: true, completion: nil)
             fab.close()
         })
+        
         fab.addItem("Avaliar", icon: UIImage(named: "icShare")!, handler: { item in
             self.rateApp(appId: "id1200173802", completion: { (success) in
                 print("RateApp \(success)")
             })
             fab.close()
         })
+
         fab.addItem("Contato", icon: UIImage(named: "icShare")!, handler: { item in
-            
+            self.sendEmail()
             fab.close()
         })
+        
+        
         fab.buttonColor = UIColor.red
         fab.plusColor = UIColor.white
         self.view.addSubview(fab)
     
-    
-    
     }
-    
-    
-    
-    
     
     //Avaliacao na apple store
     func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
@@ -88,7 +75,6 @@ class AboutsViewController: BaseViewController {
     }
     
     
-
     func CallAlomo(url:String){
         Alamofire.request(url).responseJSON(completionHandler: {
             response in
@@ -100,9 +86,7 @@ class AboutsViewController: BaseViewController {
     
     func parseData(JSONData: Data){
         let carregamento = UserDefaults.standard.object(forKey: self.chave) as? NSDictionary
-        
         SVProgressHUD.show(withStatus: "Carregando")
-        
         do{
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
             
@@ -124,16 +108,36 @@ class AboutsViewController: BaseViewController {
             OperationQueue.main.addOperation {
                 SVProgressHUD.dismiss()
             }
-            
-            
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            //self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
     }
-
     
-
-
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["daniel.araujos@icloud.com"])
+            mail.setMessageBody("<p>Dispositivo: \(UIDevice.current.name)</p>", isHTML: true)
+            mail.setSubject("Opinião sobre o aplicativo Guia do Calouro")
+            
+            present(mail, animated: true)
+        } else {
+            self.showAlert(title: "Ops.", message: "Ocorreu algum problema no envio. Tente novamente mais tarde!")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
+    func showAlert(title:String, message:String){
+        let alertaController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertaAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertaController.addAction(alertaAction)
+        present(alertaController, animated: true, completion: nil)
+    }
 }

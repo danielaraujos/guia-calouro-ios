@@ -45,7 +45,7 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
     }
     
     func parseData(JSONData: Data){
-        let carregamento = UserDefaults.standard.object(forKey: self.chave) as? NSDictionary
+        let carregamento = UserDefaults.standard.object(forKey: self.chave) as! NSDictionary
         
         SVProgressHUD.show(withStatus: "Carregando")
         
@@ -53,10 +53,20 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
         
             if carregamento != nil{
-                let buildingDictionaries = carregamento?["buildings"] as! [[String:AnyObject]]
-                for buildingDictionary in buildingDictionaries{
-                    let newBuilding = Building(array: buildingDictionary)
-                    self.buildings.append(newBuilding)
+                if json != carregamento {
+                    let buildingDictionaries = json["buildings"] as! [[String:AnyObject]]
+                    for buildingDictionary in buildingDictionaries{
+                        let newBuilding = Building(array: buildingDictionary)
+                        self.buildings.append(newBuilding)
+                    }
+                
+                }else{
+                    let buildingDictionaries = carregamento["buildings"] as! [[String:AnyObject]]
+                    for buildingDictionary in buildingDictionaries{
+                        let newBuilding = Building(array: buildingDictionary)
+                        self.buildings.append(newBuilding)
+                    }
+                
                 }
             }else{
                 print("Encontrou nulo")
@@ -75,7 +85,7 @@ class BuildingViewController: BaseViewController, UITableViewDelegate, UITableVi
         } catch let erro as NSError {
             print("Aconteceu um erro de sessão! \(erro.description)")
             SVProgressHUD.dismiss()
-            self.showAlert(title: "Aconteceu algum problema", message: "\(erro.description)")
+            self.showAlert(title: "Ops... Problema encontrado", message:  "Desculpe! Aconteceu algum problema. Reinicie o aplicativo, caso não resolva... Nos mande uma mensagem.")
         }
         
         
