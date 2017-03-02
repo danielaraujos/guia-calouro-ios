@@ -56,16 +56,16 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func updateArrayMenuOptions(){
-        arrayMenuOptions.append(["title":"Home", "icon":"HomeIcon"])
-        arrayMenuOptions.append(["title":"Prédios", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Transportes", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Calendário", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Benefícios", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Utilidades", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Alimentação", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Dicas", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Gestão", "icon":"PlayIcon"])
-        arrayMenuOptions.append(["title":"Sobre", "icon":"PlayIcon"])
+        arrayMenuOptions.append(["title":"Home", "icon":"InicioIcon"])
+        arrayMenuOptions.append(["title":"Prédios", "icon":"BuildingsIcon"])
+        arrayMenuOptions.append(["title":"Transportes", "icon":"TransportIcon"])
+        arrayMenuOptions.append(["title":"Calendário", "icon":"CalendarIcon"])
+        arrayMenuOptions.append(["title":"Benefícios", "icon":"BenefitsIcon"])
+        arrayMenuOptions.append(["title":"Utilidades", "icon":"UtilityIcon"])
+        arrayMenuOptions.append(["title":"Alimentação", "icon":"FoodIcon"])
+        arrayMenuOptions.append(["title":"Dicas", "icon":"TypsIcon"])
+        arrayMenuOptions.append(["title":"Gestão", "icon":"ManagementsIcon"])
+        arrayMenuOptions.append(["title":"Sobre", "icon":"AboutsIcon"])
         
         tblMenuOptions.reloadData()
     }

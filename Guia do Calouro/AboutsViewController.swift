@@ -42,14 +42,14 @@ class AboutsViewController: BaseViewController,MFMailComposeViewControllerDelega
             fab.close()
         })
         
-        fab.addItem("Avaliar", icon: UIImage(named: "icShare")!, handler: { item in
+        fab.addItem("Avaliar", icon: UIImage(named: "icRating")!, handler: { item in
             self.rateApp(appId: "id1200173802", completion: { (success) in
                 print("RateApp \(success)")
             })
             fab.close()
         })
 
-        fab.addItem("Contato", icon: UIImage(named: "icShare")!, handler: { item in
+        fab.addItem("Contato", icon: UIImage(named: "icMail")!, handler: { item in
             self.sendEmail()
             fab.close()
         })
