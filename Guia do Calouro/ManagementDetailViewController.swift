@@ -73,19 +73,19 @@ class ManagementDetailViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     
-    func open(scheme: String) {
-        if let url = URL(string: scheme) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: {
-                    (success) in
-                    print("Open \(scheme): \(success)")
-                })
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
-    
+//    func open(scheme: String) {
+//        if let url = URL(string: scheme) {
+//            if #available(iOS 10.0, *) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: {
+//                    (success) in
+//                    print("Open \(scheme): \(success)")
+//                })
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//        }
+//    }
+//    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -101,8 +101,17 @@ class ManagementDetailViewController: UIViewController, UITableViewDelegate, UIT
             
         }else if indexPath.section == 3{
             
+            if let url = NSURL(string: "mailto://\(self.conteudo.email!)")
+            {
+                UIApplication.shared.openURL(url as URL)
+            }
+            
         }else if indexPath.section == 4 {
-            open(scheme: "tel://\(conteudo.phone!)")
+            //open(scheme: "tel://\(conteudo.phone!)")
+            if let url = NSURL(string: "telprompt://\(self.conteudo.phone!)")
+            {
+                UIApplication.shared.openURL(url as URL)
+            }
             
         }
         

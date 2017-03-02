@@ -95,18 +95,18 @@ class UsefulDetailViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    func open(scheme: String) {
-        if let url = URL(string: scheme) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: {
-                    (success) in
-                    print("Open \(scheme): \(success)")
-                })
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
+//    func open(scheme: String) {
+//        if let url = URL(string: scheme) {
+//            if #available(iOS 10.0, *) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: {
+//                    (success) in
+//                    print("Open \(scheme): \(success)")
+//                })
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//        }
+//    }
     
     
     
@@ -120,7 +120,11 @@ class UsefulDetailViewController: UIViewController, UITableViewDataSource, UITab
             }else if indexPath.section == 1{
                 
             }else if indexPath.section == 2{
-                 open(scheme: "tel://\(self.telephone.phone!)")
+                 //open(scheme: "tel://\(self.telephone.phone!)")
+                if let url = NSURL(string: "telprompt://\(self.telephone.phone!)")
+                {
+                    UIApplication.shared.openURL(url as URL)
+                }
             }
         }else{
             
@@ -128,7 +132,16 @@ class UsefulDetailViewController: UIViewController, UITableViewDataSource, UITab
                 
             }else if indexPath.section == 1{
                 
+                if let url = NSURL(string: "mailto://\(self.email.mail!)")
+                {
+                    UIApplication.shared.openURL(url as URL)
+                }
+                
             }else if indexPath.section == 2{
+                if let url = NSURL(string: "telprompt://\(self.email.phone!)")
+                {
+                    UIApplication.shared.openURL(url as URL)
+                }
             }
         
         
@@ -136,20 +149,4 @@ class UsefulDetailViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if action == #selector(cut(_:)) {
-            return true
-        }
-        if action == #selector(paste(_:)) {
-            return false
-        }
-        if action == #selector(select(_:)) {
-            return false
-        }
-        if action == #selector(selectAll(_:)) {
-            return false
-        }
-        
-        return super.canPerformAction(action, withSender: sender)
-    }
-}
+   }
