@@ -91,10 +91,18 @@ class AboutsViewController: BaseViewController,MFMailComposeViewControllerDelega
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
             
             if carregamento != nil{
-                let dictionaries = carregamento?["abouts"] as! [[String:AnyObject]]
-                for dictionary in dictionaries{
-                    let new = About(array: dictionary)
-                    self.abouts.append(new)
+                if carregamento != json {
+                    let dictionaries = json["abouts"] as! [[String:AnyObject]]
+                    for dictionary in dictionaries{
+                        let new = About(array: dictionary)
+                        self.abouts.append(new)
+                    }
+                }else{
+                    let dictionaries = carregamento?["abouts"] as! [[String:AnyObject]]
+                    for dictionary in dictionaries{
+                        let new = About(array: dictionary)
+                        self.abouts.append(new)
+                    }
                 }
             }else{
                 

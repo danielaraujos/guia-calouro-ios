@@ -10,8 +10,6 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import SVProgressHUD
-import Foundation
-import SwiftyJSON
 
 class BenefitsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!

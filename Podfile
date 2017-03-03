@@ -11,7 +11,6 @@ target 'Guia do Calouro' do
    pod 'Firebase'
    pod 'Firebase/AdMob'
    pod 'Firebase/Messaging'
-   pod 'SwiftyJSON'
 
 
 end

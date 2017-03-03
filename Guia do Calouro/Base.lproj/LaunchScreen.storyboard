@@ -21,17 +21,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4B-J4-MmN">
+                                <rect key="frame" x="115" y="447" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logomarca" translatesAutoresizingMaskIntoConstraints="NO" id="TCf-Lg-8Tb">
                                 <rect key="frame" x="86" y="211" width="149" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="KEJ-zr-dTr"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95612449860684257" green="0.95728083153671018" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="191" id="2ES-El-JPS"/>
-                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DdG-Tv-43B"/>
-                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="P69-Fi-99K"/>
-                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="70" id="dBS-eu-Pwc"/>
+                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="191" id="1U0-CO-f4o"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Q4B-J4-MmN" secondAttribute="bottom" constant="100" id="BDg-xb-Ph5"/>
+                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="centerX" secondItem="Q4B-J4-MmN" secondAttribute="centerX" id="N2Q-3E-cf3"/>
+                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="70" id="tb1-LU-rBt"/>
+                            <constraint firstItem="TCf-Lg-8Tb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xHS-Y4-HBz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Q4B-J4-MmN"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

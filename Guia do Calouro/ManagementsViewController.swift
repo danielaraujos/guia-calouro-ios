@@ -49,17 +49,33 @@ class ManagementsViewController: UIViewController, UITabBarDelegate, UITableView
             //print(json)
             
             if carregamento != nil{
-                let categoriesDictionaries = carregamento["managements"] as! [[String:AnyObject]]
-                for categoryDictionary in categoriesDictionaries{
-                    let new = Management(array: categoryDictionary)
-                    self.managements.append(new)
-                }
-                
-                for management1 in managements{
-                    if(self.cManagement.id! == management1.category_management_id!){
-                        let new = Management(id: management1.id!, function: management1.function!, name: management1.name!, room: management1.room!, email: management1.email!, phone: management1.phone!, category_management_id: management1.category_management_id!)
-                        self.tmp.append(new)
+                if carregamento != json {
+                    let categoriessDictionaries = json["managements"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriessDictionaries{
+                        let new = Management(array: categoryDictionary)
+                        self.managements.append(new)
                     }
+                    
+                    for management1 in managements{
+                        if(self.cManagement.id! == management1.category_management_id!){
+                            let new = Management(id: management1.id!, function: management1.function!, name: management1.name!, room: management1.room!, email: management1.email!, phone: management1.phone!, category_management_id: management1.category_management_id!)
+                            self.tmp.append(new)
+                        }
+                    }
+                }else{
+                    let categoriesDictionaries = carregamento["managements"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriesDictionaries{
+                        let new = Management(array: categoryDictionary)
+                        self.managements.append(new)
+                    }
+                    
+                    for management1 in managements{
+                        if(self.cManagement.id! == management1.category_management_id!){
+                            let new = Management(id: management1.id!, function: management1.function!, name: management1.name!, room: management1.room!, email: management1.email!, phone: management1.phone!, category_management_id: management1.category_management_id!)
+                            self.tmp.append(new)
+                        }
+                    }
+                
                 }
 
             }else{

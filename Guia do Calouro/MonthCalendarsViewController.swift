@@ -49,14 +49,28 @@ class MonthCalendarsViewController: BaseViewController , UITableViewDelegate, UI
             let json = try JSONSerialization.jsonObject(with: JSONData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
         
             if carregamento != nil{
-                let calendarDictionaries = carregamento["calendars"] as! [[String:AnyObject]]
-                for calendarDictionary in calendarDictionaries{
-                    let newCalendar = Calendar(array: calendarDictionary)
-                    self.calendars.append(newCalendar)
-                }
-                for calendar in calendars{
-                    if( conteudo.id! == calendar.month_calendar_id){
-                        self.tmp.append(calendar.name!)
+                if carregamento != json {
+                    let calendarDictionaries = json["calendars"] as! [[String:AnyObject]]
+                    for calendarDictionary in calendarDictionaries{
+                        let newCalendar = Calendar(array: calendarDictionary)
+                        self.calendars.append(newCalendar)
+                    }
+                    for calendar in calendars{
+                        if( conteudo.id! == calendar.month_calendar_id){
+                            self.tmp.append(calendar.name!)
+                        }
+                    }
+                
+                }else{
+                    let calendarDictionaries = carregamento["calendars"] as! [[String:AnyObject]]
+                    for calendarDictionary in calendarDictionaries{
+                        let newCalendar = Calendar(array: calendarDictionary)
+                        self.calendars.append(newCalendar)
+                    }
+                    for calendar in calendars{
+                        if( conteudo.id! == calendar.month_calendar_id){
+                            self.tmp.append(calendar.name!)
+                        }
                     }
                 }
             }else{

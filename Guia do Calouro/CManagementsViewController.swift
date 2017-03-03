@@ -49,10 +49,19 @@ class CManagementsViewController: BaseViewController, UITableViewDelegate, UITab
             //print(json)
             
             if carregamento != nil{
-                let categoriesDictionaries = carregamento["CManagements"] as! [[String:AnyObject]]
-                for categoryDictionary in categoriesDictionaries{
-                    let new = CManagement(array: categoryDictionary)
-                    self.categories.append(new)
+                if carregamento != json {
+                    let categoriessDictionaries = json["CManagements"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriessDictionaries{
+                        let new = CManagement(array: categoryDictionary)
+                        self.categories.append(new)
+                    }
+                }else{
+                    let categoriesDictionaries = carregamento["CManagements"] as! [[String:AnyObject]]
+                    for categoryDictionary in categoriesDictionaries{
+                        let new = CManagement(array: categoryDictionary)
+                        self.categories.append(new)
+                    }
+                
                 }
                 
                 

@@ -96,7 +96,7 @@ class TransportsViewController: BaseViewController ,MKMapViewDelegate, UITableVi
         schedules = Schedule(id: 1, name: "Ida: 7:30 - 07:50", shifts_id: 1)
         self.schedules.append(schedules)
         
-        schedules = Schedule(id: 2, name: "Intervalo: 09:30 - 10-00", shifts_id: 1)
+        schedules = Schedule(id: 2, name: "Intervalo: 09:30 - 10:00", shifts_id: 1)
         self.schedules.append(schedules)
         
         schedules = Schedule(id: 3, name: "Volta: 11:30", shifts_id: 1)
