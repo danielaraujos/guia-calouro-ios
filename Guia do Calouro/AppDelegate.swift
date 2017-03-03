@@ -29,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         application.registerUserNotificationSettings(notificationSettings)
         
-        
-        
         return true
     }
     
@@ -63,9 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
-    
-    
     func tokenRefreshNotification(notification: NSNotification) {
         if let refreshedToken = FIRInstanceID.instanceID().token() {
             print("InstanceID token: \(refreshedToken)")
@@ -74,8 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Connect to FCM since connection may have failed when attempted before having a token.
         self.connectToFcm()
     }
-
-
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

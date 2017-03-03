@@ -13,7 +13,6 @@
 		4C12C2401E4F667B00BAC0BD /* BenefitsCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C23F1E4F667B00BAC0BD /* BenefitsCelula.swift */; };
 		4C12C2421E4F668800BAC0BD /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12C2411E4F668800BAC0BD /* Benefit.swift */; };
 		4C190DAE1E63BF360086066A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C190DAD1E63BF360086066A /* GoogleService-Info.plist */; };
-		4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C190DB01E63C0410086066A /* UserNotifications.framework */; };
 		4C20D1341E5D2132004EB158 /* ManagementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20D1331E5D2132004EB158 /* ManagementDetailViewController.swift */; };
 		4C223BEA1E513D3F00374EF2 /* Useful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C223BE91E513D3F00374EF2 /* Useful.swift */; };
 		4C347F781E568E6300D4E3FC /* UsefulDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C347F771E568E6300D4E3FC /* UsefulDetailViewController.swift */; };
@@ -143,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C190DB11E63C0410086066A /* UserNotifications.framework in Frameworks */,
 				4CC4D6DD1E61053900BD8C86 /* CoreLocation.framework in Frameworks */,
 				96B229E941B2BD8B80D77F60 /* Pods_Guia_do_Calouro.framework in Frameworks */,
 			);
