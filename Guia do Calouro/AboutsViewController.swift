@@ -35,7 +35,7 @@ class AboutsViewController: BaseViewController,MFMailComposeViewControllerDelega
     func buttonFloat(){
         let fab = KCFloatingActionButton()
         fab.addItem("Compartilhar", icon: UIImage(named: "icShare")!, handler: { item in
-            let site = "https://itunes.apple.com/us/app/hinário-novo-cantico/id1200173802"
+            let site = "https://itunes.apple.com/us/app/guia-do-calouro/id1211493779"
             let activitiVC = UIActivityViewController(activityItems: [site], applicationActivities: nil)
             activitiVC.popoverPresentationController?.sourceView = self.view
             self.present(activitiVC, animated: true, completion: nil)
@@ -43,7 +43,7 @@ class AboutsViewController: BaseViewController,MFMailComposeViewControllerDelega
         })
         
         fab.addItem("Avaliar", icon: UIImage(named: "icRating")!, handler: { item in
-            self.rateApp(appId: "id1200173802", completion: { (success) in
+            self.rateApp(appId: "id1211493779", completion: { (success) in
                 print("RateApp \(success)")
             })
             fab.close()
